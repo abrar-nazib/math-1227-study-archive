@@ -46,6 +46,9 @@ First find the gradient of \(r\):
 
 Now use the chain rule on \(\ln r\):
 
+> [!IMPORTANT]
+> **Exam formula — radial field potential identity**
+
 \[
 \nabla(\ln r)=\frac1r\nabla r=\frac{\vec r}{r^2}.
 \]
@@ -61,6 +64,11 @@ If \(\vec F=\vec r/r^2\) and the question asks for \(\vec F=-\nabla\phi\), then
 \]
 
 so \(\phi=-\ln r+C\). If \(\phi=0\) at \(r=a\), then \(C=\ln a\), hence \(\phi=\ln(a/r)\).
+
+> [!IMPORTANT]
+> **Exam formula — when \(\vec F=\vec r/r^2=-\nabla\phi\) and \(\phi(a)=0\)**
+>
+> \(\displaystyle \phi=\ln\left(\frac{a}{r}\right),\quad r>0.\)
 
 ## 4. A practical potential-finding method
 

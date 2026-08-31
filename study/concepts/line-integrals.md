@@ -18,6 +18,9 @@ d\vec r=\vec r\,'(t)dt
 
 and
 
+> [!IMPORTANT]
+> **Exam formula — vector line integral**
+
 \[
 \int_C\vec F\cdot d\vec r=
 \int_a^b\vec F(\vec r(t))\cdot\vec r\,'(t)\,dt.
@@ -33,6 +36,9 @@ and
 
 For \(\vec F=P\hat i+Q\hat j+R\hat k\), an equivalent form is
 
+> [!IMPORTANT]
+> **Exam formula — component form**
+
 \[
 \int_C P\,dx+Q\,dy+R\,dz.
 \]
@@ -40,6 +46,9 @@ For \(\vec F=P\hat i+Q\hat j+R\hat k\), an equivalent form is
 ## 3. A circle in the plane \(z=1\)
 
 The circle \(x^2+y^2=1, z=1\) can be written as
+
+> [!IMPORTANT]
+> **Exam formula — unit circle at height \(z=1\)**
 
 \[
 x=\cos\theta,\qquad y=\sin\theta,\qquad z=1.

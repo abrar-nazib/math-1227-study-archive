@@ -20,6 +20,16 @@ Before creating a guide, inspect the relevant question and the existing concept 
 
 Create a new concept note only when the idea is likely to recur or needs a self-contained explanation to make the requested guide understandable. Use a focused, descriptive filename.
 
+## Clarification questions
+
+When the student asks a clarification question, answer it directly and inspect the relevant concept note before editing it.
+
+- Add the explanation when it is a foundational idea, resolves a likely misconception, or will help with later questions.
+- Do not add a separate note for a trivial question or duplicate an explanation that is already sufficient.
+- If the idea already exists but is hard to understand, improve that existing explanation rather than creating a parallel one.
+- Point the student to the exact concept note and section that now contains the explanation.
+- Do not change unrelated study files in response to a clarification question.
+
 ## Guide design
 
 For each requested question or sub-question:
@@ -31,6 +41,10 @@ For each requested question or sub-question:
 5. Call out common mistakes only when they are relevant to that problem.
 
 Prefer a hybrid structure: keep reusable material in `study/concepts/`, then give the question-specific reasoning and answer together in the guide. Link concepts at the top of each guide.
+
+## Revision formulas
+
+In concept notes, visually highlight every formula that is directly used to solve an archive exam question. Use a Markdown callout beginning `> [!IMPORTANT]` and label it `Exam formula` immediately before the formula. Do not box routine intermediate algebra or formulas included only for background; the highlights are for quick revision after the syllabus is complete.
 
 ## Mathematical integrity
 
