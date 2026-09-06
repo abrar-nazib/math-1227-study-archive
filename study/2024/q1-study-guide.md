@@ -5,6 +5,7 @@ This guide teaches the three ideas tested in 2024 Q1: plane equations, conservat
 - [Vectors and planes](../concepts/vectors-and-planes.md)
 - [Scalar fields, gradients, and potentials](../concepts/scalar-fields-gradient-and-potential.md)
 - [Line integrals](../concepts/line-integrals.md)
+- [Trigonometric formulas quick reference](../concepts/trigonometric-formulas-reference.md) for Q1(c)
 
 ---
 
@@ -154,6 +155,8 @@ Then
 d\vec r=(-\sin\theta\,\hat i+\cos\theta\,\hat j)\,d\theta.
 \]
 
+This comes from differentiating the three coordinates of the moving point. In particular, \(d(\cos\theta)/d\theta=-\sin\theta\), \(d(\sin\theta)/d\theta=\cos\theta\), and \(d(1)/d\theta=0\). The final zero means the particle never moves upward or downward.
+
 Along the curve, \(x=\cos\theta\), \(y=\sin\theta\), and \(z=1\), so
 
 \[
@@ -161,22 +164,50 @@ Along the curve, \(x=\cos\theta\), \(y=\sin\theta\), and \(z=1\), so
 (\sin\theta\cos\theta+2)\hat k.
 \]
 
-Dotting with \(d\vec r\), the \(\hat k\) term disappears because the path has no vertical motion:
+Here is exactly what happened. The original field is a rule that requires a location \((x,y,z)\). But our particle is no longer at one fixed location: at each value of \(\theta\), it is at \((\cos\theta,\sin\theta,1)\). So we replace every \(x,y,z\) in **each component** of the field:
 
 \[
-\vec A\cdot d\vec r=
-\left[-(\sin\theta+\cos\theta)\sin\theta+\cos^2\theta\right]d\theta.
+\begin{aligned}
+yz+zx
+&=(\sin\theta)(1)+(1)(\cos\theta)
+=\sin\theta+\cos\theta,\\
+xz&=(\cos\theta)(1)=\cos\theta,\\
+xy+2z
+&=(\cos\theta)(\sin\theta)+2(1)
+=\sin\theta\cos\theta+2.
+\end{aligned}
 \]
 
-Therefore
+After this substitution, \(\vec A\) is no longer written in terms of three changing coordinates. It is written in terms of the one parameter \(\theta\), just like the path. This is the key simplification: now the whole problem is an ordinary one-variable integral.
+
+Now calculate the dot product one component at a time. The \(\hat k\) term disappears because the path has no vertical motion: its matching component in \(d\vec r\) is \(0\).
+
+\[
+\begin{aligned}
+\vec A\cdot d\vec r
+&=\Big[(\sin\theta+\cos\theta)\hat i+\cos\theta\hat j+(\sin\theta\cos\theta+2)\hat k\Big]\\
+&\quad\cdot\Big[(-\sin\theta)\hat i+(\cos\theta)\hat j+0\hat k\Big]d\theta\\
+&=(\sin\theta+\cos\theta)(-\sin\theta)d\theta+(\cos\theta)(\cos\theta)d\theta\\
+&\quad+(\sin\theta\cos\theta+2)(0)d\theta\\
+&=\Big[-\sin^2\theta-\sin\theta\cos\theta+\cos^2\theta+0\Big]d\theta\\
+&=\Big[\cos^2\theta-\sin^2\theta-\sin\theta\cos\theta\Big]d\theta.
+\end{aligned}
+\]
+
+Put this result into the line integral.
 
 \[
 \begin{aligned}
 \int_C\vec A\cdot d\vec r
 &=\int_{\pi/2}^{0}\left(\cos^2\theta-\sin^2\theta-\sin\theta\cos\theta\right)d\theta\\
-&=\int_{\pi/2}^{0}\left(\cos2\theta-\tfrac12\sin2\theta\right)d\theta\\
-&=\left[\tfrac12\sin2\theta+\tfrac14\cos2\theta\right]_{\pi/2}^{0}\\
-&=\frac14-\left(-\frac14\right).
+&=\int_{\pi/2}^{0}\left(\cos2\theta-\frac12\sin2\theta\right)d\theta
+&&\text{[Identities: \(\cos^2\theta-\sin^2\theta=\cos2\theta\), \(\sin\theta\cos\theta=\frac12\sin2\theta\)]}\\
+&=\left[\frac12\sin2\theta+\frac14\cos2\theta\right]_{\pi/2}^{0}
+&&\text{[Formulas: \(\int\cos2\theta\,d\theta=\frac12\sin2\theta\), \(\int\sin2\theta\,d\theta=-\frac12\cos2\theta\)]}\\
+&=\left[\frac12\sin0+\frac14\cos0\right]-\left[\frac12\sin\pi+\frac14\cos\pi\right]\\
+&=\left[\frac12(0)+\frac14(1)\right]-\left[\frac12(0)+\frac14(-1)\right]\\
+&=\frac14-\left(-\frac14\right)\\
+&=\frac12.
 \end{aligned}
 \]
 

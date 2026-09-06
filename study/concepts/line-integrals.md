@@ -1,8 +1,52 @@
 # Line Integrals of Vector Fields
 
+## Before you begin: the missing building blocks
+
+Read this note in this order. A line integral combines all four ideas below.
+
+1. A **vector** is an arrow with direction and size: \(\langle a,b,c\rangle\).
+2. A **vector field** puts a different arrow at each location. For example, wind velocity or force is a vector field.
+3. A **curve** is a route through space. A parameterization \(\vec r(t)\) tells us where the moving particle is at time \(t\).
+4. The **dot product** measures the part of one arrow acting in another arrow's direction.
+
+The vector basics are in [Vectors and Planes](vectors-and-planes.md), and derivative/integral rules are in the [Quick Reference](differentiation-and-integration-reference.md).
+
+### 1. Dot product: why it appears
+
+For two vectors \(\vec u=\langle u_1,u_2,u_3\rangle\) and \(\vec v=\langle v_1,v_2,v_3\rangle\),
+
+\[
+\vec u\cdot\vec v=u_1v_1+u_2v_2+u_3v_3
+=|\vec u|\,|\vec v|\cos\alpha.
+\]
+
+The second form is the meaning: \(\alpha\) is the angle between the arrows. If the arrows point in the same direction, the dot product is positive; if they are perpendicular, it is zero; if opposite, it is negative. That is exactly what “a force helps, does nothing, or resists motion” means.
+
+### 2. Curve, position, and displacement
+
+Think of \(\vec r(t)\) as the particle's GPS position. For example,
+
+\[
+\vec r(t)=\langle t,t^2,0\rangle
+\]
+
+means that at time \(t=2\), the particle is at \((2,4,0)\). Its velocity is
+
+\[
+\vec r\,'(t)=\langle1,2t,0\rangle.
+\]
+
+In a tiny time \(dt\), it moves by \(d\vec r=\vec r\,'(t)dt\). This small displacement points **along the curve**, which is why it is called a tangent displacement.
+
+### 3. From one tiny step to the whole trip
+
+At one position, calculate tiny work as \(dW=\vec F\cdot d\vec r\). The line integral simply adds all these tiny values from the start of the route to the end. Nothing new is being invented by the integral: it is a continuous version of adding many small numbers.
+
 ## 1. What \(\int_C\vec F\cdot d\vec r\) means
 
 A line integral adds the component of a vector field tangent to a path. In mechanics, it is the work done by a force \(\vec F\) as an object travels along \(C\).
+
+![A force vector and a tiny tangent displacement along a curved path](../assets/line-integral-work-diagram.png)
 
 If the path is parameterized by
 

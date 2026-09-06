@@ -34,17 +34,27 @@ When the student asks a clarification question, answer it directly and inspect t
 
 For each requested question or sub-question:
 
-1. State what the question is testing and identify the cues in its wording.
-2. Explain the prerequisite concepts intuitively, with a small example when that improves understanding.
+1. Begin with an **underlying-concept map**. State what the question is testing, identify the cues in its wording, and list every background idea needed in the order it will be used.
+2. Explain every prerequisite concept intuitively, with a small example when that improves understanding. Never rely on the student to infer an unstated background concept.
 3. Give a concise “solve it yourself” checklist before revealing the answer.
 4. Provide a detailed derivation, including substitutions, algebra, sign conventions, and a final check.
 5. Call out common mistakes only when they are relevant to that problem.
+
+### No skipped calculation lines
+
+In worked solutions, do not skip calculation lines. Show every substitution into a formula, derivative or integral evaluation, algebraic expansion, simplification, and use of limits that is needed to move from one displayed line to the next. Do not replace a calculation with phrases such as “therefore,” “similarly,” or “after simplifying” unless the intervening calculation has already been shown immediately before it. If a repeated calculation is genuinely identical, show it once in full and state exactly which values are being substituted in the repeated case.
 
 Prefer a hybrid structure: keep reusable material in `study/concepts/`, then give the question-specific reasoning and answer together in the guide. Link concepts at the top of each guide.
 
 ## Revision formulas
 
 In concept notes, visually highlight every formula that is directly used to solve an archive exam question. Use a Markdown callout beginning `> [!IMPORTANT]` and label it `Exam formula` immediately before the formula. Do not box routine intermediate algebra or formulas included only for background; the highlights are for quick revision after the syllabus is complete.
+
+## Calculus rule annotations
+
+Whenever a differentiation or integration rule is used in a worked derivation, state the **actual formula** being applied beside or immediately before that step. For example: `[Power rule: \(\int x^n\,dx=x^{n+1}/(n+1)+C\)]` or `[Chain rule: \(d[f(u)]/dx=f'(u)u'\)]`. A label alone, such as `[Using: antidifferentiation]`, is not enough. Do not label ordinary algebraic simplification as a calculus rule.
+
+For partial derivatives, state which variables are held constant and give the actual relevant rule before or beside the first calculation that uses it. For example: `\(\partial(cu)/\partial u=c\)` and `\(\partial v/\partial u=0\)` for an independent variable \(v\ne u\).
 
 ## Mathematical integrity
 
