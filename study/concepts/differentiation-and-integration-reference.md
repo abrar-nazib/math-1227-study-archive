@@ -29,7 +29,7 @@ Use this as a glance sheet. Here \(C\) is an arbitrary constant, \(u=u(x)\), and
 | \(e^{u}\) | \(e^{u}u'\) |
 | \(a^x\) | \(a^x\ln a\) |
 | \(\ln x\) | \(1/x\) |
-| \(\ln|u|\) | \(u'/u\) |
+| \(\ln\lvert u\rvert\) | \(u'/u\) |
 | \(\sin u\) | \(\cos u\,u'\) |
 | \(\cos u\) | \(-\sin u\,u'\) |
 | \(\tan u\) | \(\sec^2u\,u'\) |
@@ -60,7 +60,7 @@ Example: \(\partial(x^2y+3z)/\partial x=2xy\), because \(y,z\) are constants wit
 | --- | --- |
 | Constant | \(\int c\,dx=cx+C\) |
 | Power \((n\ne-1)\) | \(\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\) |
-| Log case | \(\int\frac1x\,dx=\ln|x|+C\) |
+| Log case | \(\int\frac1x\,dx=\ln\lvert x\rvert+C\) |
 | Constant multiple | \(\int cf(x)\,dx=c\int f(x)\,dx\) |
 | Sum / difference | \(\int(f\pm g)dx=\int fdx\pm\int gdx\) |
 
