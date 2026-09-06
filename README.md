@@ -6,7 +6,7 @@ This repository is organized for direct question-paper practice.
 
 Open a year below, choose questions from both sections, and use the original scans in [`sources/`](sources/) to check any item marked `[Source-faded]`.
 
-For guided work, start with the [2024 Q1 study guide](study/2024/q1-study-guide.md), then continue to the [2024 Q2 study guide](study/2024/q2-study-guide.md). The guides link to reusable concept notes in [`study/concepts/`](study/concepts/), which will be expanded as more papers are studied.
+For guided work, start with the [2024 Q1 study guide](study/2024/q1-study-guide.md), then continue to the [2024 Q2 study guide](study/2024/q2-study-guide.md) and [2024 Q3 study guide](study/2024/q3-study-guide.md). The guides link to reusable concept notes in [`study/concepts/`](study/concepts/), which will be expanded as more papers are studied.
 
 For rapid revision, use the [differentiation and integration quick reference](study/concepts/differentiation-and-integration-reference.md).
 

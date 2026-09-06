@@ -40,6 +40,10 @@ For each requested question or sub-question:
 4. Provide a detailed derivation, including substitutions, algebra, sign conventions, and a final check.
 5. Call out common mistakes only when they are relevant to that problem.
 
+### Teaching difficult concepts
+
+For an abstract, unfamiliar, or potentially intimidating idea, begin with a concrete scenario the student can picture (for example, rain through a window, water through a net, or a tiny paddle wheel in flowing water). State exactly what each mathematical operation represents in that scenario before or alongside the formal explanation and formula. Use the analogy to make the operation understandable, not as decorative filler.
+
 ### No skipped calculation lines
 
 In worked solutions, do not skip calculation lines. Show every substitution into a formula, derivative or integral evaluation, algebraic expansion, simplification, and use of limits that is needed to move from one displayed line to the next. Do not replace a calculation with phrases such as “therefore,” “similarly,” or “after simplifying” unless the intervening calculation has already been shown immediately before it. If a repeated calculation is genuinely identical, show it once in full and state exactly which values are being substituted in the repeated case.

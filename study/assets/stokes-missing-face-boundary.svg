@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">The boundary of the tetrahedral surface in the Stokes theorem question</title>
+  <desc id="desc">A tetrahedron has its y equals zero face removed. The exposed triangular boundary is oriented using the positive y normal.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#ba3c37"/></marker>
+  </defs>
+  <rect width="900" height="560" fill="#fbfcfe"/>
+  <text x="450" y="45" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123d73">Stokes’ theorem: the missing face gives the boundary</text>
+  <text x="450" y="76" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">The original surface is every outer face except the highlighted face in the xz-plane.</text>
+  <path d="M190 430 L670 430 L370 160 Z" fill="#b9ddf5" fill-opacity="0.28" stroke="#6f9bb9" stroke-width="3"/>
+  <path d="M190 430 L450 500 L670 430 Z" fill="#8fc5e7" fill-opacity="0.24" stroke="#6f9bb9" stroke-width="3"/>
+  <path d="M670 430 L450 500 L370 160 Z" fill="#d7edf9" fill-opacity="0.4" stroke="#6f9bb9" stroke-width="3"/>
+  <path d="M190 430 L450 500 L370 160 Z" fill="#ffdca0" fill-opacity="0.83" stroke="#ba7a00" stroke-width="5"/>
+  <text x="220" y="112" font-family="sans-serif" font-size="18" font-weight="700" fill="#815300">removed face: y = 0</text>
+  <text x="220" y="137" font-family="sans-serif" font-size="16" fill="#815300">this triangle is the boundary C</text>
+  <path d="M198 415 L340 192" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
+  <path d="M388 174 L440 475" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
+  <path d="M430 480 L225 442" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
+  <text x="540" y="130" font-family="sans-serif" font-size="17" fill="#9b332f">C: O → B → A → O</text>
+  <path d="M440 375 L620 375" stroke="#123d73" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="445" y="360" font-family="sans-serif" font-size="17" fill="#123d73">use normal toward +y</text>
+  <path d="M190 430L105 485 M190 430L760 430 M190 430L190 110" fill="none" stroke="#182d45" stroke-width="4"/>
+  <text x="85" y="505" font-family="sans-serif" font-size="19" fill="#182d45">x</text>
+  <text x="770" y="436" font-family="sans-serif" font-size="19" fill="#182d45">y</text>
+  <text x="202" y="121" font-family="sans-serif" font-size="19" fill="#182d45">z</text>
+</svg>

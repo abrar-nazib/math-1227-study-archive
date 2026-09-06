@@ -1,85 +1,60 @@
 # Curl, Surface Integrals, and Volume Integrals
 
-This note supplies the background needed for 2024 Q2. Read the sections in order: each later operation uses the earlier ones.
+This is the reusable new material for 2024 Q2. It deliberately does **not** re-teach ideas that already have their own notes. Read the prerequisite sections below first, then return here.
 
-## 1. Concept map
+## Before this note: exact prerequisites
 
-There are two questions in 2024 Q2, and each asks for a different kind of accumulation.
+| You need to know | Read this exact place first | Why it is needed here |
+| --- | --- | --- |
+| Vector components and the dot product | [Vectors and planes, sections 1–2](vectors-and-planes.md#1-vectors-direction-and-magnitude) | Curl and flux use vectors; flux uses a dot product. |
+| What a scalar field and a vector field are | [Scalar fields, gradients, and potentials, section 1](scalar-fields-gradient-and-potential.md#1-scalar-field-versus-vector-field) | Curl starts with a vector field. |
+| Partial derivatives | [Differentiation and integration quick reference, “Partial derivatives and gradient”](differentiation-and-integration-reference.md#partial-derivatives-and-gradient) | Curl is calculated using partial derivatives. |
+| Basic integration and definite-integral limits | [Differentiation and integration quick reference, “Integration” and “Definite integrals”](differentiation-and-integration-reference.md#integration) | Surface and volume integrals add quantities using limits. |
 
-| Question | Object being accumulated | Region | Result |
-| --- | --- | --- | --- |
-| Q2(a) | The component of curl passing through a surface | A finite piece of a plane | One number (a scalar) |
-| Q2(b) | The curl vector at every point | A three-dimensional solid | One vector |
+> [!TIP]
+> You do not need to memorise those notes before reading this one. You only need to recognise their ideas. If a word below feels unfamiliar, follow its link rather than trying to guess it.
 
-Both begin by finding the **curl** of a vector field. After that, Q2(a) needs a surface parameterization and Q2(b) needs three-dimensional integration limits.
+## 1. The map of 2024 Q2
 
-## 2. Partial derivatives: changing one input at a time
+| Part | Plain-language question | New tool introduced here |
+| --- | --- | --- |
+| Q2(a) | How much of the field’s local turning passes through a finite slanted sheet? | Curl, surface flux, and surface parameterization |
+| Q2(b) | What is the total local turning throughout a solid under a sloping roof? | Vector triple integral and three-dimensional bounds |
 
-A function such as \(f(x,y,z)\) has three inputs. A partial derivative asks how the function changes when only one input changes and the other two are temporarily treated as constants. The symbol after \(\partial\) tells you which input is allowed to vary.
+Both parts begin with **curl**. After that, Q2(a) works with a surface and Q2(b) works with a solid.
 
-For example, when differentiating with respect to \(y\), the symbols \(x\) and \(z\) are constants:
+## 2. Curl: the tiny-paddle-wheel idea
 
-\[
-\begin{aligned}
-\frac{\partial(x+2y-3z)}{\partial y}
-&=\frac{\partial x}{\partial y}+\frac{\partial(2y)}{\partial y}-\frac{\partial(3z)}{\partial y}\\
-&=0+2-0\\
-&=2.
-\end{aligned}
-\]
+Put a tiny, free-spinning paddle wheel in moving water. If the water pushes every part of it equally, the wheel may travel with the water but it does not turn. If nearby water pushes one side more strongly than the other, the wheel turns.
 
-> [!IMPORTANT]
-> **Exam formulas — basic partial derivatives**
+**Curl** measures that local tendency to turn.
 
-\[
-\frac{\partial x}{\partial x}=1,\qquad
-\frac{\partial y}{\partial y}=1,\qquad
-\frac{\partial z}{\partial z}=1,
-\]
+Real-life pictures are a whirlpool in a sink, a small eddy behind a river rock, or wind that moves faster above you than near the ground. Curl is not “how fast the whole flow is moving.” It is specifically the local spinning effect.
 
-\[
-\frac{\partial x}{\partial y}=0,\qquad
-\frac{\partial x}{\partial z}=0,\qquad
-\frac{\partial y}{\partial x}=0,
-\]
-
-and, for a constant \(c\),
-
-\[
-\frac{\partial(cu)}{\partial u}=c,
-\qquad
-\frac{\partial c}{\partial u}=0.
-\]
-
-The ordinary power rule is used in exactly the same way for the variable that is changing:
-
-\[
-\frac{\partial(x^n)}{\partial x}=nx^{n-1}.
-\]
-
-## 3. Curl: the local turning tendency of a vector field
-
-A vector field assigns an arrow to every position. Curl describes the field's local tendency to make a tiny paddle wheel turn. It is itself a vector: its direction gives the turning axis, and its size measures the strength of that local turning.
-
-Write a vector field as
-
-\[
-\vec F=P\hat i+Q\hat j+R\hat k,
-\]
-
-where \(P,Q,R\) are the \(x\)-, \(y\)-, and \(z\)-components. The symbol \(\nabla\) is read “del.” For calculation, use this component formula rather than trying to remember the determinant layout.
+![A paddle wheel turns locally because rightward flow is faster above it and slower below it.](../assets/curl-paddle-wheel-diagram.svg)
 
 > [!IMPORTANT]
-> **Exam formula — curl in component form**
+> **Exam term — curl**
+>
+> Curl is a vector that describes the local turning tendency of a vector field. Its direction is the axis about which the imaginary tiny wheel tends to turn.
 
-\[
-\nabla\times\vec F=
-\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\hat i
-+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\hat j
-+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\hat k.
-\]
+### Calculating curl
 
-### A careful mini-example
+Write the vector field as \(\vec F=P\hat i+Q\hat j+R\hat k\). The letters \(P\), \(Q\), and \(R\) are simply names for its three components. Now use this recipe exactly as written:
+
+> [!IMPORTANT]
+> **Exam formula — curl**
+>
+> \[
+> \nabla\times\vec F=
+> \left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\hat i
+> +\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\hat j
+> +\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\hat k.
+> \]
+
+Read \(\nabla\times\vec F\) as “curl of \(\vec F\).” At exam time, do not try to derive this formula; identify \(P,Q,R\), then calculate its three components one at a time.
+
+### Small worked example
 
 Let
 
@@ -87,164 +62,188 @@ Let
 \vec G=y\hat i+2x\hat j+0\hat k.
 \]
 
-Thus \(P=y\), \(Q=2x\), and \(R=0\). Substitute these three components into the formula one component at a time:
+Name the components first:
+
+\[
+P=y,\qquad Q=2x,\qquad R=0.
+\]
+
+Use the curl recipe one component at a time. The partial-derivative rules used here are in the prerequisite quick reference.
 
 \[
 \begin{aligned}
-\nabla\times\vec G
-&=\left(\frac{\partial 0}{\partial y}-\frac{\partial (2x)}{\partial z}\right)\hat i
-+\left(\frac{\partial y}{\partial z}-\frac{\partial 0}{\partial x}\right)\hat j
-+\left(\frac{\partial (2x)}{\partial x}-\frac{\partial y}{\partial y}\right)\hat k\\
-&=(0-0)\hat i+(0-0)\hat j+(2-1)\hat k\\
-&=\hat k.
+\text{\(\hat i\)-component}
+&=\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\\
+&=\frac{\partial0}{\partial y}-\frac{\partial(2x)}{\partial z}\\
+&=0-0\\
+&=0,\\[6pt]
+\text{\(\hat j\)-component}
+&=\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\\
+&=\frac{\partial y}{\partial z}-\frac{\partial0}{\partial x}\\
+&=0-0\\
+&=0,\\[6pt]
+\text{\(\hat k\)-component}
+&=\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\\
+&=\frac{\partial(2x)}{\partial x}-\frac{\partial y}{\partial y}\\
+&=2-1\\
+&=1.
 \end{aligned}
 \]
 
-The result points in the positive \(z\)-direction, so the tiny paddle wheel would turn about a vertical axis.
-
-## 4. Surface, normal direction, and flux
-
-A **surface** is a two-dimensional sheet in space. At each point of a smooth surface, a **normal vector** points straight out of the sheet. A vector field can have a component through the sheet and a component sliding along it. A flux integral counts only the component that passes through it.
-
-For a constant vector \(\vec C\) crossing a flat rectangular sheet, the central idea is
+Thus
 
 \[
-(\text{component of \(\vec C\) normal to the sheet})\times(\text{area of the sheet}).
+\nabla\times\vec G=0\hat i+0\hat j+1\hat k=\hat k.
 \]
 
-The dot product performs the “normal component” part. The surface integral adds that quantity over every tiny patch of a curved or slanted surface.
+The result points along the positive \(z\)-axis. That means the local turning is around a vertical axis.
+
+> [!TIP]
+> **Reliable curl workflow:** name \(P,Q,R\); calculate the \(\hat i\)-component, then the \(\hat j\)-component, then the \(\hat k\)-component; combine the answers only at the end. This prevents sign errors.
+
+## 3. Surface flux: what passes through a sheet
+
+A **surface** is a sheet in space: a window, a net in a river, or a finite piece of a plane. The familiar normal vector from the vectors-and-planes note is extended here: it points straight through the sheet.
+
+Imagine rain at a window. Rain moving through the window contributes to the total passing through it. Rain moving along the glass does not. **Flux** is this “through the sheet” amount.
+
+![A horizontal surface patch, its upward normal, and a field arrow split into through-surface and sliding parts.](../assets/surface-flux-diagram.svg)
+
+The dot product keeps only the part of the field pointing in the chosen normal direction. The double integral adds that contribution from every tiny patch of the whole surface.
 
 > [!IMPORTANT]
-> **Exam formula — flux of a vector field through an oriented surface**
+> **Exam formula — flux through an oriented surface**
+>
+> \[
+> \iint_S\vec C\cdot\hat n\,dS.
+> \]
+>
+> \(S\) is the entire surface; \(\vec C\) is the field; \(\hat n\) is a unit normal; and \(dS\) is one tiny area patch. The two integral signs mean “add over the full surface.”
 
-\[
-\iint_S\vec C\cdot\hat n\,dS.
-\]
+### Orientation: which side is positive?
 
-Here \(\hat n\) is a unit normal, \(dS\) is a tiny positive area, and the pair \(\hat n\,dS\) records a tiny **oriented area vector**. Reversing the normal reverses the sign of the answer.
-
-### Why a parameterization replaces \(\hat n\,dS\)
-
-Describe a surface using two independent variables \(u\) and \(v\):
-
-\[
-\vec r(u,v)=\langle x(u,v),y(u,v),z(u,v)\rangle.
-\]
-
-Changing \(u\) while holding \(v\) fixed gives one tangent vector \(\vec r_u\). Changing \(v\) while holding \(u\) fixed gives another tangent vector \(\vec r_v\). Their cross product is perpendicular to both tangents, so it is normal to the surface. Its length automatically gives the area-scaling factor.
+Every sheet has two sides. Selecting one normal selects the positive direction. For a horizontal surface, “upward” means a normal with positive \(z\)-component; “downward” means the opposite normal.
 
 > [!IMPORTANT]
-> **Exam formula — parameterized surface flux**
+> **Exam fact — changing orientation**
+>
+> Replacing \(\hat n\) by \(-\hat n\) changes a flux integral’s sign. Nothing else in the calculation changes.
 
-\[
-\iint_S\vec C\cdot\hat n\,dS
-=\iint_D\vec C(\vec r(u,v))\cdot(\vec r_u\times\vec r_v)\,du\,dv.
-\]
+This matters in Q2(a): the paper does not state an orientation. The study guide uses the standard upward orientation and explicitly gives the downward alternative.
 
-The order of the cross product selects an orientation. Using \(\vec r_v\times\vec r_u\) instead gives the negative vector and therefore the negative flux.
+## 4. Parameterizing a surface: giving every point on a sheet an address
 
-## 5. Turning a plane equation into a surface parameterization
-
-Suppose a plane is written as
-
-\[
-Ax+By+Cz=D,
-\]
-
-with \(C\ne0\). Solve for \(z\):
+To integrate over a surface, we need a systematic way to visit every point on it. A **parameterization** does that. For a plane that can be written as \(z=f(x,y)\), use \(x\) and \(y\) as the two inputs and let the plane equation supply the height \(z\).
 
 > [!IMPORTANT]
-> **Exam formula — plane written as a graph**
+> **Exam formula — parameterizing a graph-like plane**
+>
+> \[
+> z=f(x,y)
+> \quad\Longrightarrow\quad
+> \vec r(x,y)=\langle x,y,f(x,y)\rangle.
+> \]
 
-\[
-z=\frac{D-Ax-By}{C}.
-\]
-
-Now use \(x\) and \(y\) themselves as the two parameters:
-
-> [!IMPORTANT]
-> **Exam formula — parameterization of \(z=f(x,y)\)**
-
-\[
-\vec r(x,y)=\langle x,y,f(x,y)\rangle.
-\]
-
-For this choice, \(\vec r_x\times\vec r_y\) has a positive \(z\)-component. It is the upward orientation. The opposite orientation is its negative.
-
-### Mini-example: a sloping plane
-
-For the plane \(x+y+z=3\), solve for \(z\):
+For the Q2(a) plane, solve the equation for \(z\):
 
 \[
 \begin{aligned}
-x+y+z&=3,\\
-z&=3-x-y.
+2x+y+2z&=6,\\
+2z&=6-2x-y,\\
+z&=\frac{6-2x-y}{2},\\
+z&=3-x-\frac y2.
 \end{aligned}
 \]
 
-Parameterize it:
+Therefore the surface address is
 
 \[
-\vec r(x,y)=\langle x,y,3-x-y\rangle.
+\vec r(x,y)=\left\langle x,y,3-x-\frac y2\right\rangle.
 \]
 
-Differentiate each component:
+This statement only means: choose \(x\) and \(y\), then use the plane’s rule to find the matching height.
+
+### From two surface directions to a normal
+
+Changing \(x\) while keeping \(y\) fixed gives one tangent vector, \(\vec r_x\). Changing \(y\) while keeping \(x\) fixed gives another, \(\vec r_y\). Both lie along the surface.
 
 \[
 \begin{aligned}
 \vec r_x
-&=\left\langle\frac{\partial x}{\partial x},\frac{\partial y}{\partial x},\frac{\partial(3-x-y)}{\partial x}\right\rangle
-=\langle1,0,-1\rangle,\\
+&=\left\langle\frac{\partial x}{\partial x},\frac{\partial y}{\partial x},\frac{\partial(3-x-y/2)}{\partial x}\right\rangle\\
+&=\langle1,0,-1\rangle,\\[6pt]
 \vec r_y
-&=\left\langle\frac{\partial x}{\partial y},\frac{\partial y}{\partial y},\frac{\partial(3-x-y)}{\partial y}\right\rangle
-=\langle0,1,-1\rangle.
+&=\left\langle\frac{\partial x}{\partial y},\frac{\partial y}{\partial y},\frac{\partial(3-x-y/2)}{\partial y}\right\rangle\\
+&=\left\langle0,1,-\frac12\right\rangle.
 \end{aligned}
 \]
 
-Then
+The cross product gives a vector perpendicular to both tangent vectors, so it gives a normal to the plane.
+
+> [!IMPORTANT]
+> **Exam formula — cross product in components**
+>
+> \[
+> \langle a,b,c\rangle\times\langle p,q,r\rangle
+> =\langle br-cq,\;cp-ar,\;aq-bp\rangle.
+> \]
+
+For the Q2(a) tangents:
 
 \[
 \begin{aligned}
 \vec r_x\times\vec r_y
-&=\begin{vmatrix}
-\hat i&\hat j&\hat k\\
-1&0&-1\\
-0&1&-1
-\end{vmatrix}\\
-&=\big[0(-1)-(-1)(1)\big]\hat i
--\big[1(-1)-(-1)(0)\big]\hat j
-+\big[1(1)-0(0)\big]\hat k\\
-&=\hat i+\hat j+\hat k.
+&=\left\langle1,0,-1\right\rangle\times\left\langle0,1,-\frac12\right\rangle\\
+&=\left\langle0\left(-\frac12\right)-(-1)(1),\;(-1)(0)-1\left(-\frac12\right),\;1(1)-0(0)\right\rangle\\
+&=\left\langle0+1,\;0+\frac12,\;1-0\right\rangle\\
+&=\left\langle1,\frac12,1\right\rangle.
 \end{aligned}
 \]
 
-Its positive \(z\)-component confirms that this is the upward normal direction.
+Its third component is positive, so this is the upward orientation. Reversing the cross-product order reverses the normal.
 
-## 6. Triple integrals of a vector field
+The cross product does two jobs: it points normal to the surface and its length gives the area scaling for the tiny slanted patch. This leads directly to the calculation form of flux:
 
-A triple integral adds a quantity through a solid region \(V\). If the integrand is a vector, integrate each component separately:
+> [!IMPORTANT]
+> **Exam formula — parameterized surface flux**
+>
+> \[
+> \iint_S\vec C\cdot\hat n\,dS
+> =\iint_D\vec C(\vec r(x,y))\cdot(\vec r_x\times\vec r_y)\,dx\,dy.
+> \]
+>
+> \(D\) is the allowed region of the parameters. In Q2(a), the given limits make \(D\) a rectangle.
+
+## 5. Triple integrals: adding throughout a solid
+
+An ordinary integral adds along a line. A double integral adds over a sheet. A **triple integral** adds throughout a three-dimensional solid.
+
+Picture a solid object made of extremely tiny boxes. A triple integral adds the contribution from every tiny box.
+
+> [!IMPORTANT]
+> **Exam term — \(dV\)**
+>
+> \(dV\) means one tiny volume. In \(dz\,dy\,dx\), integrate vertically first, then move through \(y\), then move through \(x\).
+
+If the quantity being added is a vector, add its three components separately.
 
 > [!IMPORTANT]
 > **Exam formula — triple integral of a vector field**
+>
+> \[
+> \iiint_V\langle A,B,C\rangle\,dV
+> =\left\langle\iiint_VA\,dV,\;\iiint_VB\,dV,\;\iiint_VC\,dV\right\rangle.
+> \]
 
-\[
-\iiint_V\langle A,B,C\rangle\,dV
-=\left\langle\iiint_V A\,dV,\iiint_V B\,dV,\iiint_V C\,dV\right\rangle.
-\]
+The final result is a vector because the input was a vector.
 
-The notation \(dV\) means a tiny volume. In Cartesian coordinates, \(dV=dz\,dy\,dx\) means: first add along \(z\), then along \(y\), then along \(x\). The order may be changed, but the bounds must match the chosen order.
+## 6. Reading the bounds of the Q2(b) solid
 
-## 7. Reading the bounds of a tetrahedral region
+The coordinate planes \(x=0\), \(y=0\), and \(z=0\) form two walls and a floor. The plane \(2x+2y+z=4\) is the sloping roof. Together they enclose a pyramid-like solid called a **tetrahedron**.
 
-The coordinate planes \(x=0\), \(y=0\), and \(z=0\), together with a sloping plane, enclose a corner-shaped solid called a tetrahedral region.
+![A tetrahedral region in the first octant, with a vertical dashed guide from its triangular base to the sloping roof.](../assets/tetrahedral-volume-bounds-diagram.svg)
 
-For example, take
-
-\[
-2x+2y+z=4.
-\]
-
-First solve the sloping plane for the vertical coordinate \(z\):
+Choose the integration order \(dz\,dy\,dx\). Start with \(z\), so first find the roof height:
 
 \[
 \begin{aligned}
@@ -253,13 +252,13 @@ z&=4-2x-2y.
 \end{aligned}
 \]
 
-At a fixed allowed \((x,y)\), the solid starts at the bottom plane \(z=0\) and ends at that sloping plane:
+At a fixed base location \((x,y)\), move vertically from the floor to the roof:
 
 \[
 0\le z\le4-2x-2y.
 \]
 
-For this upper bound to be non-negative,
+For the roof to be above the floor, its height must not be negative:
 
 \[
 \begin{aligned}
@@ -270,23 +269,27 @@ y&\le2-x.
 \end{aligned}
 \]
 
-The conditions \(x\ge0\) and \(y\ge0\) come from the coordinate planes. In the \(xy\)-plane, the projection is therefore the triangle bounded by \(x=0\), \(y=0\), and \(x+y=2\). Taking \(x\) as the outside variable gives
+The two walls give \(x\ge0\) and \(y\ge0\). The base is therefore a triangle. Taking \(x\) as the outer variable gives \(0\le x\le2\); after choosing \(x\), \(y\) runs from 0 to \(2-x\).
 
 > [!IMPORTANT]
-> **Exam formula — bounds for this tetrahedral region**
+> **Exam formula — Q2(b) bounds in the order \(dz\,dy\,dx\)**
+>
+> \[
+> 0\le x\le2,\qquad
+> 0\le y\le2-x,\qquad
+> 0\le z\le4-2x-2y.
+> \]
 
-\[
-0\le x\le2,\qquad 0\le y\le2-x,\qquad 0\le z\le4-2x-2y.
-\]
+Use this same set of bounds separately for each component of the curl in Q2(b).
 
-Thus an integral over this solid can be written as
+## 7. Start the worked guide
 
-\[
-\int_0^2\int_0^{2-x}\int_0^{4-2x-2y}(\text{integrand})\,dz\,dy\,dx.
-\]
+You are ready for [2024 Q2 study guide](../2024/q2-study-guide.md) when you can state these ideas:
 
-## 8. Exam checklist for 2024 Q2
+1. Curl is local turning, like a tiny paddle wheel.
+2. Flux is what passes through a surface, and the chosen normal decides its sign.
+3. Parameterizing a surface gives each point on it two input values.
+4. A triple integral adds through a solid, and vector components are integrated separately.
 
-For Q2(a): find curl; solve the plane for \(z\); parameterize it; calculate both tangent vectors and their cross product; make the chosen orientation explicit; substitute into the flux integral.
-
-For Q2(b): find curl; solve the top plane for \(z\); derive the triangular \(xy\)-projection rather than guessing it; integrate every component over the same bounds; assemble the three answers as one vector.
+> [!TIP]
+> Use this note for the new ideas; use the linked prerequisite notes whenever you need the earlier ideas again. That keeps each topic in one reliable place.

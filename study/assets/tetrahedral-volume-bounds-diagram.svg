@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tetrahedral volume bounds</title>
+  <desc id="desc">The first-octant tetrahedron lies below a sloping roof. A vertical segment above a point in the triangular base shows the inner z bounds.</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#182d45"/></marker>
+  </defs>
+  <rect width="900" height="560" fill="#fbfcfe"/>
+  <text x="450" y="46" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123d73">Volume bounds: a tetrahedral region</text>
+  <text x="450" y="78" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">First choose a point in the triangular base; then move vertically from the bottom to the roof.</text>
+  <path d="M190 430 L670 430 L450 500 Z" fill="#cce7ff" fill-opacity="0.82" stroke="#1976bd" stroke-width="4"/>
+  <path d="M190 430 L370 160 L670 430 Z" fill="#a7d5f3" fill-opacity="0.52" stroke="#1976bd" stroke-width="4"/>
+  <path d="M190 430 L450 500 L370 160 Z" fill="#76b7e4" fill-opacity="0.38" stroke="#1976bd" stroke-width="4"/>
+  <path d="M670 430 L450 500 L370 160 Z" fill="#bfe5fa" fill-opacity="0.5" stroke="#1976bd" stroke-width="4"/>
+  <path d="M190 430L105 485 M190 430L760 430 M190 430L190 110" fill="none" stroke="#182d45" stroke-width="4" marker-end="url(#axis-arrow)"/>
+  <text x="85" y="505" font-family="sans-serif" font-size="19" fill="#182d45">x</text>
+  <text x="770" y="436" font-family="sans-serif" font-size="19" fill="#182d45">y</text>
+  <text x="202" y="121" font-family="sans-serif" font-size="19" fill="#182d45">z</text>
+  <path d="M430 458V282" stroke="#c0504d" stroke-width="6" stroke-dasharray="10 8"/>
+  <circle cx="430" cy="458" r="8" fill="#c0504d"/><circle cx="430" cy="282" r="8" fill="#c0504d"/>
+  <text x="447" y="360" font-family="sans-serif" font-size="17" font-weight="700" fill="#9a3431">vertical inner interval</text>
+  <text x="480" y="478" font-family="sans-serif" font-size="16" fill="#315a78">triangular base projection</text>
+  <text x="440" y="210" font-family="sans-serif" font-size="16" fill="#315a78">sloping roof</text>
+</svg>

@@ -21,3 +21,10 @@ This repository contains OCR transcriptions of RUET mathematics question papers.
 - When the user asks for a Markdown explanation in `/tmp`, do not modify repository files for that request.
 - After creating the requested temporary Markdown file, open it in VS Code with `code <filename>`.
 - When a user-facing explanation requires mathematical equations, write that explanation in a temporary Markdown file under `/tmp` and open it in VS Code with `code <filename>` instead of placing the equations directly in the CLI conversation.
+
+## Study-pal approach
+
+- Act as an active study partner, not as a textbook generator. The purpose of notes and solutions is to help the student understand and reason independently.
+- For a difficult idea, teach in small connected steps. Start with a concrete, imaginable situation, connect each mathematical operation to that situation, and address likely confusion before moving on.
+- Reuse and point to an existing concept note when it already teaches a prerequisite. Do not copy that material into another note; add only the genuinely new connection or concept needed for the current problem.
+- Prefer a focused explanation that unlocks the student’s next step over a broad information dump. Ask no rhetorical questions that require an answer; guide directly unless a real check-in is useful.
