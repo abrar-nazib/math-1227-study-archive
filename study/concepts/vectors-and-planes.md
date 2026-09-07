@@ -106,3 +106,31 @@ After finding a plane, check both facts:
 
 1. Substitute the given point. The left-hand side must be zero.
 2. The coefficients of \(x,y,z\) must be proportional to the given perpendicular vector.
+
+## 6. Linear independence of vectors
+
+Vectors are **linearly independent** when none of them can be built by combining the others. Think of each vector as a genuinely new direction of movement. Three independent vectors in three-dimensional space give three distinct directions; if one can be assembled from the other two, it adds no new direction and the set is dependent.
+
+To test vectors \(\vec A,\vec B,\vec C\), ask whether
+
+> [!IMPORTANT]
+> **Exam test — linear independence**
+>
+> \[
+> a\vec A+b\vec B+c\vec C=\vec0
+> \]
+>
+> has only the **trivial solution** \(a=b=c=0\). If it does, the vectors are independent. Any nontrivial solution gives a dependent relation.
+
+Put the vectors as columns of a square matrix. For three vectors in \(\mathbb R^3\), a nonzero determinant is the fast test:
+
+> [!IMPORTANT]
+> **Exam test — determinant shortcut in \(\mathbb R^3\)**
+>
+> \[
+> \det[\vec A\ \vec B\ \vec C]\ne0
+> \quad\Longrightarrow\quad
+> \vec A,\vec B,\vec C\text{ are linearly independent.}
+> \]
+
+If the determinant is zero, the vectors are dependent; solve \(a\vec A+b\vec B+c\vec C=\vec0\) to find the requested relation.
