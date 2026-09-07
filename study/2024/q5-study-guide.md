@@ -181,7 +181,15 @@ Put \(y=0\) in the first equation:
 x=z.
 \]
 
-Choose \(z=1\). Then \(x=1\) and \(y=0\), so one eigenvector is
+The equations have not fixed the size of the vector. Let the free variable be \(z=t\). Since \(x=z\) and \(y=0\), every solution has the form
+
+\[
+\vec v=\begin{pmatrix}x\\y\\z\end{pmatrix}
+=\begin{pmatrix}t\\0\\t\end{pmatrix}
+=t\begin{pmatrix}1\\0\\1\end{pmatrix}.
+\]
+
+For an eigenvector, \(t\ne0\). We choose \(t=1\) only to get the smallest simple representative; any nonzero value gives a scalar multiple pointing along the same eigenvector direction. Then \(x=1\), \(y=0\), and \(z=1\), so one eigenvector is
 
 \[
 \vec v_{-1}=\begin{pmatrix}1\\0\\1\end{pmatrix}.
