@@ -308,6 +308,14 @@ y&\le2-x.
 
 The two walls give \(x\ge0\) and \(y\ge0\). The base is therefore a triangle. Taking \(x\) as the outer variable gives \(0\le x\le2\); after choosing \(x\), \(y\) runs from 0 to \(2-x\).
 
+### Why the limits depend on each other
+
+Do not read \(0\le y\le2-x\) as a formula to memorise. It is a sentence about a moving slice. With \(x\) fixed, the vertical slice of the triangular base starts at the wall \(y=0\) and ends at the slanted base edge \(x+y=2\), which rearranges to \(y=2-x\). For example, when \(x=\tfrac12\), \(y\) may run only from 0 to \(\tfrac32\), not to 2.
+
+Likewise, after choosing both \(x\) and \(y\), the roof height is \(4-2x-2y\), so the allowed vertical segment is \(0\le z\le4-2x-2y\). At \((x,y)=(\tfrac12,1)\), the roof height is \(4-1-2=1\), hence \(0\le z\le1\). A sloping roof must produce an upper height that changes with the horizontal location.
+
+Read the nested integral from outside inward: choose \(x\), then an allowed \(y\) at that \(x\), then every allowed height \(z\) above that base point. This is exactly how the integral visits every tiny box in the solid once.
+
 > [!IMPORTANT]
 > **Exam formula — Q2(b) bounds in the order \(dz\,dy\,dx\)**
 >

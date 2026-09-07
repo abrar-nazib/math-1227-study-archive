@@ -240,6 +240,9 @@ Thus
 
 Next, derive the limits of the solid. The sloping boundary is
 
+> [!TIP]
+> If the bounds feel like a pattern rather than a picture, read [Why the limits depend on each other](../concepts/curl-surface-and-volume-integrals.md#why-the-limits-depend-on-each-other). It follows one actual base point and one actual vertical slice before writing any integral.
+
 \[
 \begin{aligned}
 2x+2y+z&=4,\\
