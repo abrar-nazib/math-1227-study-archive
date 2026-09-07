@@ -57,6 +57,21 @@ Take
 V=[a,b]\times[c,d]\times[e,f].
 \]
 
+> [!NOTE]
+> **Notation — what this box description means**
+>
+> \([a,b]\) means every \(x\)-value from \(a\) to \(b\), including both endpoints. The multiplication sign \(\times\) means “combine the three allowed coordinate ranges.” Thus \(V\) is the complete rectangular solid made of all points \((x,y,z)\) satisfying
+>
+> \[
+> a\le x\le b,\qquad c\le y\le d,\qquad e\le z\le f.
+> \]
+>
+> The letters \(a,c,e\) name the lower coordinate bounds; \(b,d,f\) name the corresponding upper bounds. This is a box, not multiplication of three ordinary numbers.
+
+![Annotated rectangular box showing the six faces and their coordinate bounds.](../assets/divergence-theorem-proof-box.svg)
+
+*Use this sketch while reading the proof: the two faces with the same coordinate letter are the pair whose fluxes are combined.*
+
 First calculate the flux through the faces \(x=b\) and \(x=a\). Their outward normals are \(+\hat i\) and \(-\hat i\), respectively.
 
 On \(x=b\),

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Annotated rectangular box used to prove the divergence theorem</title>
+  <desc id="desc">A rectangular box has opposite faces labeled by lower and upper coordinate bounds. Outward normals point in opposite directions on each face pair.</desc>
+  <defs>
+    <marker id="normal-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#ba3c37"/></marker>
+  </defs>
+  <rect width="900" height="560" fill="#fbfcfe"/>
+  <text x="450" y="43" text-anchor="middle" font-family="sans-serif" font-size="27" font-weight="700" fill="#123d73">The rectangular box used in the divergence-theorem proof</text>
+
+  <!-- Box -->
+  <path d="M205 405 L505 405 L680 295 L380 295 Z" fill="#d8effa" fill-opacity="0.52" stroke="#4388b2" stroke-width="4"/>
+  <path d="M205 175 L505 175 L680 65 L380 65 Z" fill="#edf8fd" fill-opacity="0.44" stroke="#4388b2" stroke-width="4"/>
+  <path d="M205 175 L205 405 M505 175 L505 405 M680 65 L680 295 M380 65 L380 295" stroke="#4388b2" stroke-width="4"/>
+
+  <!-- coordinate directions -->
+  <path d="M205 405 L110 465 M205 405 L760 405 M205 405 L205 105" stroke="#182d45" stroke-width="4"/>
+  <text x="90" y="485" font-family="sans-serif" font-size="19" fill="#182d45">x</text>
+  <text x="772" y="412" font-family="sans-serif" font-size="19" fill="#182d45">y</text>
+  <text x="218" y="116" font-family="sans-serif" font-size="19" fill="#182d45">z</text>
+
+  <!-- x-face normals -->
+  <path d="M202 300 L110 300" stroke="#ba3c37" stroke-width="6" marker-end="url(#normal-arrow)"/>
+  <path d="M508 300 L600 300" stroke="#ba3c37" stroke-width="6" marker-end="url(#normal-arrow)"/>
+  <path d="M112 290 L92 300 L112 310 Z" fill="#ba3c37"/>
+  <path d="M598 290 L618 300 L598 310 Z" fill="#ba3c37"/>
+  <text x="60" y="285" font-family="sans-serif" font-size="17" fill="#9b332f">x = a face</text>
+  <text x="60" y="307" font-family="sans-serif" font-size="15" fill="#9b332f">outward −i</text>
+  <text x="610" y="285" font-family="sans-serif" font-size="17" fill="#9b332f">x = b face</text>
+  <text x="610" y="307" font-family="sans-serif" font-size="15" fill="#9b332f">outward +i</text>
+
+  <!-- y-face labels -->
+  <text x="307" y="440" font-family="sans-serif" font-size="17" fill="#316b93">y = c face</text>
+  <text x="550" y="385" font-family="sans-serif" font-size="17" fill="#316b93">y = d face</text>
+
+  <!-- z-face labels -->
+  <text x="420" y="150" font-family="sans-serif" font-size="17" fill="#316b93">z = f face</text>
+  <text x="420" y="470" font-family="sans-serif" font-size="17" fill="#316b93">z = e face</text>
+
+  <!-- box ranges -->
+  <rect x="650" y="115" width="205" height="115" rx="12" fill="#fff7e2" stroke="#d3a43d" stroke-width="2"/>
+  <text x="752" y="147" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#765500">Box limits</text>
+  <text x="752" y="176" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#765500">a ≤ x ≤ b</text>
+  <text x="752" y="201" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#765500">c ≤ y ≤ d</text>
+  <text x="752" y="226" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#765500">e ≤ z ≤ f</text>
+
+  <text x="450" y="530" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">Pair the x-faces, then the y-faces, then the z-faces; add their outward fluxes.</text>
+</svg>
