@@ -60,17 +60,68 @@ Let \(u=\tan y\). [Chain rule: \(du/dx=\sec^2y\,dy/dx\).] Then
 \frac{du}{dx}+2xu=x^3.
 \]
 
-This is linear. Its integrating factor is
+This matches the standard linear form \(u'+P(x)u=Q(x)\), so \(P(x)=2x\) and \(Q(x)=x^3\). The integrating factor is not guessed. We want a function \(I(x)\) for which
+
+\[
+I\frac{du}{dx}+2xIu=\frac{d}{dx}(Iu).
+\]
+
+By the product rule, the right side is \(Iu'+I'u\). For the two expressions to match, require
+
+\[
+I'=2xI.
+\]
+
+Separate and integrate:
+
+\[
+\frac{dI}{I}=2x\,dx,
+\]
+
+\[
+\ln|I|=x^2+C_0.
+\]
+
+An irrelevant nonzero constant multiplier can be dropped, so choose
 
 \[
 I=e^{\int2x\,dx}=e^{x^2}.
 \]
 
-Multiply throughout:
+The purpose of this factor is to turn the two left-hand terms into one product derivative. “Multiply throughout” means multiply **each** term by \(e^{x^2}\):
 
 \[
-e^{x^2}\frac{du}{dx}+2xe^{x^2}u=x^3e^{x^2},
+e^{x^2}\left(\frac{du}{dx}\right)+e^{x^2}(2xu)=e^{x^2}(x^3).
 \]
+
+Reordering ordinary multiplication gives
+
+\[
+e^{x^2}\frac{du}{dx}+2xe^{x^2}u=x^3e^{x^2}.
+\]
+
+Now use the product rule \(d(fg)/dx=fg'+f'g\), with
+
+\[
+f=e^{x^2},\qquad g=u.
+\]
+
+The chain rule gives
+
+\[
+f'=\frac{d}{dx}\bigl(e^{x^2}\bigr)
+=e^{x^2}\frac{d}{dx}(x^2)
+=2xe^{x^2}.
+\]
+
+Therefore
+
+\[
+\frac{d}{dx}\bigl(e^{x^2}u\bigr)
+=e^{x^2}\frac{du}{dx}+\bigl(2xe^{x^2}\bigr)u.
+\]
+
+The right side is exactly the left side after multiplication, so we may write
 
 \[
 \frac{d}{dx}\bigl(e^{x^2}u\bigr)=x^3e^{x^2}.
