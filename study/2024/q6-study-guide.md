@@ -154,7 +154,21 @@ Uses include modelling the motion of projectiles, rockets, and planets; current 
 
 ### Concept map and solve-it-yourself path
 
-It is written as \(Mdx+Ndy=0\), so first test exactness. If exact, integrate \(M\) with respect to \(x\), add \(g(y)\), compare its \(y\)-derivative with \(N\), then set the potential equal to a constant.
+It is written as \(Mdx+Ndy=0\), so first test exactness. Think of \(M\) as the coefficient attached to a tiny horizontal move \(dx\), and \(N\) as the coefficient attached to a tiny vertical move \(dy\). If both come from one hidden function \(\Phi(x,y)\), then
+
+\[
+d\Phi=\Phi_xdx+\Phi_ydy=Mdx+Ndy.
+\]
+
+The equality \(M_y=N_x\) checks whether those two pieces can fit together as one \(\Phi\). If they do, integrate \(M\) with respect to \(x\), add \(g(y)\), compare its \(y\)-derivative with \(N\), then set the potential equal to a constant.
+
+### Solve it yourself
+
+1. Copy the two coefficients into \(M\) and \(N\); do not include \(dx\) or \(dy\) in them.
+2. Calculate \(M_y\) and \(N_x\), holding the other variable fixed. If they match, continue with the exact method.
+3. Integrate \(M\) with respect to \(x\). Treat every expression involving only \(y\) as a constant during this integration.
+4. Add \(g(y)\), differentiate the result with respect to \(y\), and compare it to \(N\).
+5. Find \(g(y)\), write \(\Phi=C\), and verify by finding both partial derivatives of the final \(\Phi\).
 
 ### Detailed answer
 
@@ -164,7 +178,40 @@ Let
 M=y^2e^{xy^2}+4x^3,\qquad N=2xye^{xy^2}-3y^2.
 \]
 
+The target is a function \(\Phi(x,y)\) satisfying both
+
+\[
+\Phi_x=M,
+\qquad \Phi_y=N.
+\]
+
+We do not know \(\Phi\) yet. The exactness test tells us whether one function can satisfy both requirements.
+
 Differentiate \(M\) with respect to \(y\), holding \(x\) constant. [Product and chain rules: \(d(uv)/dy=u'v+uv'\), \(d(e^{u})/dy=e^u u'\).]
+
+\[
+M_y=\frac{\partial}{\partial y}\bigl(y^2e^{xy^2}\bigr)+\frac{\partial}{\partial y}(4x^3).
+\]
+
+Because \(x\) is fixed, \(\partial(4x^3)/\partial y=0\). For the first term use the product rule:
+
+\[
+M_y=(2y)e^{xy^2}+y^2\frac{\partial}{\partial y}\bigl(e^{xy^2}\bigr)+0.
+\]
+
+The exponent is \(u=xy^2\). Holding \(x\) fixed,
+
+\[
+\frac{\partial u}{\partial y}=x\frac{\partial(y^2)}{\partial y}=x(2y)=2xy.
+\]
+
+Thus the chain rule gives
+
+\[
+\frac{\partial}{\partial y}\bigl(e^{xy^2}\bigr)=e^{xy^2}(2xy).
+\]
+
+Put it into the product-rule line:
 
 \[
 M_y=2ye^{xy^2}+y^2e^{xy^2}(2xy).
@@ -177,14 +224,36 @@ M_y=2ye^{xy^2}+2xy^3e^{xy^2}.
 Differentiate \(N\) with respect to \(x\), holding \(y\) constant:
 
 \[
-N_x=2ye^{xy^2}+2xye^{xy^2}(y^2)-0.
+N_x=\frac{\partial}{\partial x}\bigl(2xye^{xy^2}\bigr)-\frac{\partial}{\partial x}(3y^2).
+\]
+
+Because \(y\) is fixed, \(\partial(3y^2)/\partial x=0\). Treating \(2y\) as a constant, apply the product rule to \(xe^{xy^2}\):
+
+\[
+N_x=2y\left(e^{xy^2}+x\frac{\partial}{\partial x}\bigl(e^{xy^2}\bigr)\right)-0.
+\]
+
+Now \(\partial(xy^2)/\partial x=y^2\), so
+
+\[
+\frac{\partial}{\partial x}\bigl(e^{xy^2}\bigr)=e^{xy^2}y^2.
+\]
+
+Therefore
+
+\[
+N_x=2y\left(e^{xy^2}+xe^{xy^2}y^2\right).
+\]
+
+\[
+N_x=2ye^{xy^2}+2xy^3e^{xy^2}.
 \]
 
 \[
 N_x=2ye^{xy^2}+2xy^3e^{xy^2}=M_y.
 \]
 
-The equation is exact. Integrate \(M\) with respect to \(x\):
+The two results match, so the equation is exact. We can now build \(\Phi\) from \(\Phi_x=M\). Integrate \(M\) with respect to \(x\):
 
 \[
 \Phi=\int\bigl(y^2e^{xy^2}+4x^3\bigr)dx+g(y).
@@ -196,19 +265,29 @@ For the first term, \(u=xy^2\), so \(du=y^2dx\):
 \int y^2e^{xy^2}dx=\int e^u du=e^u=e^{xy^2}.
 \]
 
+This is valid because \(y\) is held fixed during integration with respect to \(x\), so \(y^2\,dx\) is exactly the differential of \(xy^2\).
+
 For the second term, [Power rule: \(\int x^n dx=x^{n+1}/(n+1)+C\)]:
 
 \[
 \int4x^3dx=x^4.
 \]
 
-Thus
+There may still be a term depending only on \(y\). It is invisible to \(\partial/\partial x\), because \(\partial g(y)/\partial x=0\). That is why we must write
 
 \[
 \Phi=e^{xy^2}+x^4+g(y).
 \]
 
 Differentiate with respect to \(y\):
+
+\[
+\Phi_y=\frac{\partial}{\partial y}\bigl(e^{xy^2}\bigr)+\frac{\partial}{\partial y}(x^4)+g'(y).
+\]
+
+\[
+\Phi_y=e^{xy^2}(2xy)+0+g'(y).
+\]
 
 \[
 \Phi_y=2xye^{xy^2}+g'(y).
@@ -228,8 +307,32 @@ g'(y)=-3y^2,
 g(y)=-y^3.
 \]
 
-Hence the general solution is
+The hidden potential is therefore
+
+\[
+\Phi(x,y)=e^{xy^2}+x^4-y^3.
+\]
+
+Hence the general solution, meaning every contour on which \(\Phi\) stays constant, is
 
 \[
 \boxed{e^{xy^2}+x^4-y^3=C}.
 \]
+
+### Final verification
+
+Differentiate the final left side with respect to \(x\):
+
+\[
+\frac{\partial}{\partial x}\bigl(e^{xy^2}+x^4-y^3\bigr)
+=y^2e^{xy^2}+4x^3=M.
+\]
+
+Differentiate it with respect to \(y\):
+
+\[
+\frac{\partial}{\partial y}\bigl(e^{xy^2}+x^4-y^3\bigr)
+=2xye^{xy^2}-3y^2=N.
+\]
+
+Thus \(d\Phi=Mdx+Ndy\), exactly the left side of the original equation. The solution checks out.
