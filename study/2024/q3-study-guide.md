@@ -213,6 +213,15 @@ Use the normal \(\hat n=+\hat j\). The compatible boundary direction is
 O\longrightarrow B\longrightarrow A\longrightarrow O.
 \]
 
+### Why this direction, rather than \(O\to A\to B\to O\)?
+
+The normal and boundary direction are a matched pair. For the normal \(+\hat j\), use the right-hand rule: point your right thumb toward positive \(y\); your curled fingers trace the positive direction around the triangle. That direction is \(O\to B\to A\to O\).
+
+Starting \(O\to A\to B\to O\) is not “wrong”; it is the exact reverse trip around the same triangle. But it belongs with the opposite normal, \(-\hat j\). Reversing a line-integral path changes its sign, and reversing the surface normal also changes the flux sign. Stokes’ theorem remains true only when the path direction and normal are reversed together.
+
+> [!TIP]
+> The question does not prescribe an orientation. You may choose either pair: \(+\hat j\) with \(O\to B\to A\to O\), or \(-\hat j\) with \(O\to A\to B\to O\). This guide chooses the first pair and keeps it throughout.
+
 ![The missing face is the simple triangular surface used for the Stokes calculation; its oriented rim is the boundary curve.](../assets/stokes-missing-face-boundary.svg)
 
 Write the field components as
@@ -287,6 +296,11 @@ Use \(x=t\). Along this straight edge, \(y=0\) and \(x+z=4\), so \(z=4-t\):
 \vec r_2(t)=\langle t,0,4-t\rangle,
 \qquad0\le t\le4.
 \]
+
+Here we deliberately choose \(t=x\). At the starting point \(B=(0,0,4)\), the \(x\)-coordinate is 0, so \(t=0\). At the ending point \(A=(4,0,0)\), the \(x\)-coordinate is 4, so \(t=4\). Therefore the direction \(B\to A\) gives the limits \(0\to4\). Meanwhile \(z=4-t\) automatically decreases from 4 to 0 as \(t\) increases.
+
+> [!TIP]
+> A parameter is simply the coordinate you decide to use to track the moving point. If we had instead chosen \(t=z\), then this same trip would have used limits \(4\to0\). Both choices describe the same directed edge when their limits match the chosen parameter.
 
 Differentiate each coordinate:
 

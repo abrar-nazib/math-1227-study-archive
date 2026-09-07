@@ -242,6 +242,8 @@ The direction around \(C\) and the chosen normal must agree. Use the right-hand 
 
 Changing both the normal and boundary direction leaves both sides unchanged. Changing only one reverses one side and breaks the equality.
 
+For the 2024 Q3(b) missing face, the compatible pair used in the guide is normal \(+\hat j\) and boundary direction \(O\to B\to A\to O\). The reverse route \(O\to A\to B\to O\) is equally valid only with normal \(-\hat j\).
+
 ## 5. The shortcut when a surface has a difficult shape
 
 Stokes’ theorem depends only on the boundary curve \(C\), not on the particular spanning surface chosen. If two surfaces have the same boundary and compatible orientation, either surface gives the same answer.

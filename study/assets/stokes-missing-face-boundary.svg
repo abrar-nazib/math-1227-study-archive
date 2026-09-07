@@ -1,26 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
-  <title id="title">The boundary of the tetrahedral surface in the Stokes theorem question</title>
-  <desc id="desc">A tetrahedron has its y equals zero face removed. The exposed triangular boundary is oriented using the positive y normal.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">Coordinate-accurate geometry for the Stokes theorem verification in 2024 Q3b</title>
+  <desc id="desc">The tetrahedron bounded by coordinate planes and 2x plus y plus 2z equals 8. The omitted face y equals zero has vertices O, A, B; the boundary follows O to B to A to O and the compatible normal is positive y.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#ba3c37"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#bd3b36"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#663f8a"/></marker>
+    <marker id="axis-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#1d3145"/></marker>
   </defs>
-  <rect width="900" height="560" fill="#fbfcfe"/>
-  <text x="450" y="45" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123d73">Stokes’ theorem: the missing face gives the boundary</text>
-  <text x="450" y="76" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">The original surface is every outer face except the highlighted face in the xz-plane.</text>
-  <path d="M190 430 L670 430 L370 160 Z" fill="#b9ddf5" fill-opacity="0.28" stroke="#6f9bb9" stroke-width="3"/>
-  <path d="M190 430 L450 500 L670 430 Z" fill="#8fc5e7" fill-opacity="0.24" stroke="#6f9bb9" stroke-width="3"/>
-  <path d="M670 430 L450 500 L370 160 Z" fill="#d7edf9" fill-opacity="0.4" stroke="#6f9bb9" stroke-width="3"/>
-  <path d="M190 430 L450 500 L370 160 Z" fill="#ffdca0" fill-opacity="0.83" stroke="#ba7a00" stroke-width="5"/>
-  <text x="220" y="112" font-family="sans-serif" font-size="18" font-weight="700" fill="#815300">removed face: y = 0</text>
-  <text x="220" y="137" font-family="sans-serif" font-size="16" fill="#815300">this triangle is the boundary C</text>
-  <path d="M198 415 L340 192" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
-  <path d="M388 174 L440 475" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
-  <path d="M430 480 L225 442" stroke="#ba3c37" stroke-width="7" marker-end="url(#arrow)"/>
-  <text x="540" y="130" font-family="sans-serif" font-size="17" fill="#9b332f">C: O → B → A → O</text>
-  <path d="M440 375 L620 375" stroke="#123d73" stroke-width="6" marker-end="url(#arrow)"/>
-  <text x="445" y="360" font-family="sans-serif" font-size="17" fill="#123d73">use normal toward +y</text>
-  <path d="M190 430L105 485 M190 430L760 430 M190 430L190 110" fill="none" stroke="#182d45" stroke-width="4"/>
-  <text x="85" y="505" font-family="sans-serif" font-size="19" fill="#182d45">x</text>
-  <text x="770" y="436" font-family="sans-serif" font-size="19" fill="#182d45">y</text>
-  <text x="202" y="121" font-family="sans-serif" font-size="19" fill="#182d45">z</text>
+  <rect width="1000" height="650" fill="#fbfcfe"/>
+  <text x="500" y="43" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123d73">Stokes’ theorem geometry for 2024 Q3(b)</text>
+  <text x="500" y="73" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">The vertices are the intercepts of the plane 2x + y + 2z = 8.</text>
+
+  <!-- Coordinate projection: O=(180,400); A=(480,540); B=(180,80); D=(580,200). -->
+  <!-- The three faces of S, shown behind the omitted face. -->
+  <path d="M180 400 L480 540 L580 200 Z" fill="#a7d3ed" fill-opacity="0.30" stroke="#4d86ad" stroke-width="3"/>
+  <path d="M180 400 L180 80 L580 200 Z" fill="#cce7f5" fill-opacity="0.34" stroke="#4d86ad" stroke-width="3"/>
+  <path d="M480 540 L180 80 L580 200 Z" fill="#b8ddf1" fill-opacity="0.42" stroke="#4d86ad" stroke-width="3"/>
+
+  <!-- Omitted xz-plane face y=0. -->
+  <path d="M180 400 L480 540 L180 80 Z" fill="#ffd888" fill-opacity="0.82" stroke="#b27a00" stroke-width="5" stroke-dasharray="11 6"/>
+  <text x="28" y="245" font-family="sans-serif" font-size="19" font-weight="700" fill="#805400">gold face: y = 0</text>
+  <text x="28" y="271" font-family="sans-serif" font-size="16" fill="#805400">the xz-plane triangle OAB</text>
+  <path d="M148 280 L225 315" stroke="#b27a00" stroke-width="3"/>
+
+  <!-- The directed boundary C: O -> B -> A -> O. -->
+  <path d="M180 370 L180 200" stroke="#bd3b36" stroke-width="8" marker-end="url(#arrow-red)"/>
+  <path d="M232 160 L395 410" stroke="#bd3b36" stroke-width="8" marker-end="url(#arrow-red)"/>
+  <path d="M430 515 L260 435" stroke="#bd3b36" stroke-width="8" marker-end="url(#arrow-red)"/>
+  <text x="350" y="110" font-family="sans-serif" font-size="18" font-weight="700" fill="#9b302d">C: O → B → A → O</text>
+
+  <!-- Compatible +y normal. Positive y points from the omitted face toward D, hence into the tetrahedron. -->
+  <path d="M280 340 L430 265" stroke="#663f8a" stroke-width="7" marker-end="url(#arrow-purple)"/>
+  <text x="445" y="285" font-family="sans-serif" font-size="17" font-weight="700" fill="#5b317f">n = +j</text>
+  <text x="445" y="308" font-family="sans-serif" font-size="15" fill="#5b317f">toward the tetrahedron interior</text>
+
+  <!-- Vertices with exact coordinates. -->
+  <g fill="#173f63">
+    <circle cx="180" cy="400" r="7"/><circle cx="480" cy="540" r="7"/><circle cx="180" cy="80" r="7"/><circle cx="580" cy="200" r="7"/>
+  </g>
+  <text x="95" y="425" font-family="sans-serif" font-size="17" fill="#173f63">O = (0, 0, 0)</text>
+  <text x="390" y="575" font-family="sans-serif" font-size="17" fill="#173f63">A = (4, 0, 0)</text>
+  <text x="72" y="72" font-family="sans-serif" font-size="17" fill="#173f63">B = (0, 0, 4)</text>
+  <text x="590" y="190" font-family="sans-serif" font-size="17" fill="#173f63">D = (0, 8, 0)</text>
+
+  <!-- Coordinate axes follow the same projection. -->
+  <path d="M180 400 L555 575" stroke="#1d3145" stroke-width="4" marker-end="url(#axis-arrow)"/>
+  <path d="M180 400 L700 140" stroke="#1d3145" stroke-width="4" marker-end="url(#axis-arrow)"/>
+  <path d="M180 400 L180 35" stroke="#1d3145" stroke-width="4" marker-end="url(#axis-arrow)"/>
+  <text x="575" y="600" font-family="sans-serif" font-size="19" fill="#1d3145">x</text>
+  <text x="710" y="138" font-family="sans-serif" font-size="19" fill="#1d3145">y</text>
+  <text x="192" y="42" font-family="sans-serif" font-size="19" fill="#1d3145">z</text>
+
+  <rect x="695" y="300" width="255" height="160" rx="14" fill="#eff8fc" stroke="#78a7c5" stroke-width="2"/>
+  <text x="823" y="332" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#315a78">How the sketch is used</text>
+  <text x="715" y="365" font-family="sans-serif" font-size="16" fill="#315a78">• S is the three blue faces.</text>
+  <text x="715" y="391" font-family="sans-serif" font-size="16" fill="#315a78">• The gold face is not in S.</text>
+  <text x="715" y="417" font-family="sans-serif" font-size="16" fill="#315a78">• Its rim is the boundary C.</text>
+  <text x="715" y="443" font-family="sans-serif" font-size="16" fill="#315a78">• Use +j for the easy face.</text>
+
+  <text x="500" y="625" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">The gold triangle is the simple spanning surface used to evaluate the curl-flux side of Stokes’ theorem.</text>
 </svg>
