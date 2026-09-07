@@ -21,6 +21,7 @@ This repository contains OCR transcriptions of RUET mathematics question papers.
 - When the user asks for a Markdown explanation in `/tmp`, do not modify repository files for that request.
 - After creating the requested temporary Markdown file, open it in VS Code with `code <filename>`.
 - When a user-facing explanation requires mathematical equations, write that explanation in a temporary Markdown file under `/tmp` and open it in VS Code with `code <filename>` instead of placing the equations directly in the CLI conversation.
+- Never link to, embed, or cite a file under `/tmp` from any repository file. Temporary files disappear after reboot; persistent study notes may link only to persistent repository files.
 
 ## Study-pal approach
 

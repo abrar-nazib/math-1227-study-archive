@@ -157,6 +157,26 @@ The dot product keeps only the part of the field pointing in the chosen normal d
 >
 > \(S\) is the entire surface; \(\vec C\) is the field; \(\hat n\) is a unit normal; and \(dS\) is one tiny area patch. The two integral signs mean “add over the full surface.”
 
+### A scalar field times a surface normal
+
+Sometimes the question gives a scalar field \(\phi\), rather than a vector field, and asks for
+
+\[
+\iint_S\phi\hat n\,dS.
+\]
+
+At each tiny patch, \(\phi\) supplies only a weight (one number), while \(\hat n\,dS\) supplies the oriented tiny area vector. The result is a vector. With a parameterization, avoid separately normalizing \(\hat n\): use the oriented area vector directly.
+
+> [!IMPORTANT]
+> **Exam formula — scalar-weighted oriented surface integral**
+>
+> \[
+> \iint_S\phi\hat n\,dS
+> =\iint_D\phi(\vec r(u,v))\bigl(\vec r_u\times\vec r_v\bigr)\,du\,dv.
+> \]
+
+Reversing the chosen orientation reverses the resulting vector. This is the form used in 2023 Q3(a).
+
 ### Orientation: which side is positive?
 
 Every sheet has two sides. Selecting one normal selects the positive direction. For a horizontal surface, “upward” means a normal with positive \(z\)-component; “downward” means the opposite normal.
