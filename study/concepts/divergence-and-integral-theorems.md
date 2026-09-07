@@ -59,6 +59,72 @@ Let \(\vec F=x\hat i+y\hat j+z\hat k\). Then
 
 The positive result matches the picture: every arrow points away from the origin and gets larger farther out, so a tiny balloon has net outflow.
 
+### Why the divergence formula measures net outward flow
+
+This is the useful derivation in your teacher’s note. Take a tiny rectangular box centred at \((x,y,z)\), with side lengths \(\Delta x\), \(\Delta y\), and \(\Delta z\). Let \(P\) be the field’s \(x\)-component at the centre.
+
+On the left \(x\)-face, the \(x\)-component is approximately
+
+\[
+P-\frac12\frac{\partial P}{\partial x}\Delta x.
+\]
+
+On the right \(x\)-face, it is approximately
+
+\[
+P+\frac12\frac{\partial P}{\partial x}\Delta x.
+\]
+
+These are first-order approximations: move half the box width left or right from the centre, and use the partial derivative to estimate the change in \(P\).
+
+The right face has outward normal in the positive \(x\)-direction. The left face has outward normal in the negative \(x\)-direction. Therefore, the net **outward** flow through the two \(x\)-faces is right-face flow minus left-face flow:
+
+\[
+\begin{aligned}
+\Phi_x
+&=\left(P+\frac12\frac{\partial P}{\partial x}\Delta x\right)\Delta y\Delta z
+-\left(P-\frac12\frac{\partial P}{\partial x}\Delta x\right)\Delta y\Delta z\\
+&=\left[P+\frac12\frac{\partial P}{\partial x}\Delta x-P+\frac12\frac{\partial P}{\partial x}\Delta x\right]\Delta y\Delta z\\
+&=\frac{\partial P}{\partial x}\Delta x\Delta y\Delta z.
+\end{aligned}
+\]
+
+For the \(y\)-faces, use the centre approximations \(Q-\tfrac12(\partial Q/\partial y)\Delta y\) on the lower-\(y\) face and \(Q+\tfrac12(\partial Q/\partial y)\Delta y\) on the upper-\(y\) face:
+
+\[
+\begin{aligned}
+\Phi_y
+&=\left(Q+\frac12\frac{\partial Q}{\partial y}\Delta y\right)\Delta x\Delta z
+-\left(Q-\frac12\frac{\partial Q}{\partial y}\Delta y\right)\Delta x\Delta z\\
+&=\left[Q+\frac12\frac{\partial Q}{\partial y}\Delta y-Q+\frac12\frac{\partial Q}{\partial y}\Delta y\right]\Delta x\Delta z\\
+&=\frac{\partial Q}{\partial y}\Delta x\Delta y\Delta z.
+\end{aligned}
+\]
+
+For the \(z\)-faces, use the centre approximations \(R-\tfrac12(\partial R/\partial z)\Delta z\) on the lower-\(z\) face and \(R+\tfrac12(\partial R/\partial z)\Delta z\) on the upper-\(z\) face:
+
+\[
+\begin{aligned}
+\Phi_z
+&=\left(R+\frac12\frac{\partial R}{\partial z}\Delta z\right)\Delta x\Delta y
+-\left(R-\frac12\frac{\partial R}{\partial z}\Delta z\right)\Delta x\Delta y\\
+&=\left[R+\frac12\frac{\partial R}{\partial z}\Delta z-R+\frac12\frac{\partial R}{\partial z}\Delta z\right]\Delta x\Delta y\\
+&=\frac{\partial R}{\partial z}\Delta x\Delta y\Delta z.
+\end{aligned}
+\]
+
+Add the three outward flows, then divide by the tiny box’s volume \(\Delta x\Delta y\Delta z\):
+
+\[
+\begin{aligned}
+\frac{\Phi_x+\Phi_y+\Phi_z}{\Delta x\Delta y\Delta z}
+&=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\\
+&=\nabla\cdot\vec F.
+\end{aligned}
+\]
+
+So divergence is net **outward** flow per unit volume. Be careful with the word “gain”: the fluid retained inside the box is inward flow minus outward flow, so it has the opposite sign. The teacher’s note has the right component derivation, but its use of “gain” can blur that sign distinction.
+
 ## 3. Closed surfaces and the divergence theorem
 
 A **closed surface** completely encloses a volume: the skin of a ball, all six faces of a box, or the complete outer shell of a tetrahedron. It has no boundary edge.
@@ -98,7 +164,7 @@ The two faces perpendicular to the \(x\)-axis have outward normals \(+\hat i\) a
 \Phi_x
 &=\int_e^f\int_c^dP(b,y,z)\,dy\,dz
 -\int_e^f\int_c^dP(a,y,z)\,dy\,dz\\
-&=\int_e^f\int_c^d\big[P(b,y,z)-P(a,y,z)\big],dy\,dz\\
+&=\int_e^f\int_c^d\big[P(b,y,z)-P(a,y,z)\big]dy\,dz\\
 &=\int_e^f\int_c^d\left[\int_a^b\frac{\partial P}{\partial x}\,dx\right]dy\,dz
 &&\text{[Fundamental Theorem of Calculus: \(\int_a^b f'(x)\,dx=f(b)-f(a)\)]}\\
 &=\iiint_V\frac{\partial P}{\partial x}\,dV.
@@ -112,7 +178,7 @@ For the two faces perpendicular to the \(y\)-axis, the outward normals are \(+\h
 \Phi_y
 &=\int_e^f\int_a^bQ(x,d,z)\,dx\,dz
 -\int_e^f\int_a^bQ(x,c,z)\,dx\,dz\\
-&=\int_e^f\int_a^b\big[Q(x,d,z)-Q(x,c,z)\big],dx\,dz\\
+&=\int_e^f\int_a^b\big[Q(x,d,z)-Q(x,c,z)\big]dx\,dz\\
 &=\int_e^f\int_a^b\left[\int_c^d\frac{\partial Q}{\partial y}\,dy\right]dx\,dz
 &&\text{[Fundamental Theorem of Calculus: \(\int_c^d f'(y)\,dy=f(d)-f(c)\)]}\\
 &=\iiint_V\frac{\partial Q}{\partial y}\,dV.
@@ -126,7 +192,7 @@ For the two faces perpendicular to the \(z\)-axis, the outward normals are \(+\h
 \Phi_z
 &=\int_c^d\int_a^bR(x,y,f)\,dx\,dy
 -\int_c^d\int_a^bR(x,y,e)\,dx\,dy\\
-&=\int_c^d\int_a^b\big[R(x,y,f)-R(x,y,e)\big],dx\,dy\\
+&=\int_c^d\int_a^b\big[R(x,y,f)-R(x,y,e)\big]dx\,dy\\
 &=\int_c^d\int_a^b\left[\int_e^f\frac{\partial R}{\partial z}\,dz\right]dx\,dy
 &&\text{[Fundamental Theorem of Calculus: \(\int_e^f G'(z)\,dz=G(f)-G(e)\)]}\\
 &=\iiint_V\frac{\partial R}{\partial z}\,dV.

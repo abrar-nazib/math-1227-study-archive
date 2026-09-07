@@ -78,7 +78,7 @@ So the combined flux through those two faces is
 \Phi_x
 &=\int_e^f\int_c^dP(b,y,z)\,dy\,dz
 +\int_e^f\int_c^d[-P(a,y,z)]\,dy\,dz\\
-&=\int_e^f\int_c^d\big[P(b,y,z)-P(a,y,z)\big],dy\,dz\\
+&=\int_e^f\int_c^d\big[P(b,y,z)-P(a,y,z)\big]dy\,dz\\
 &=\int_e^f\int_c^d\left[\int_a^b\frac{\partial P}{\partial x}\,dx\right]dy\,dz
 &&\text{[Fundamental Theorem of Calculus: \(\int_a^b f'(x)\,dx=f(b)-f(a)\)]}\\
 &=\int_e^f\int_c^d\int_a^b\frac{\partial P}{\partial x}\,dx\,dy\,dz\\
@@ -93,7 +93,7 @@ Now calculate the \(y\)-face pair. On \(y=d\), the outward normal is \(+\hat j\)
 \Phi_y
 &=\int_e^f\int_a^bQ(x,d,z)\,dx\,dz
 +\int_e^f\int_a^b[-Q(x,c,z)]\,dx\,dz\\
-&=\int_e^f\int_a^b\big[Q(x,d,z)-Q(x,c,z)\big],dx\,dz\\
+&=\int_e^f\int_a^b\big[Q(x,d,z)-Q(x,c,z)\big]dx\,dz\\
 &=\int_e^f\int_a^b\left[\int_c^d\frac{\partial Q}{\partial y}\,dy\right]dx\,dz
 &&\text{[Fundamental Theorem of Calculus: \(\int_c^d f'(y)\,dy=f(d)-f(c)\)]}\\
 &=\int_e^f\int_a^b\int_c^d\frac{\partial Q}{\partial y}\,dy\,dx\,dz\\
@@ -108,7 +108,7 @@ Finally calculate the \(z\)-face pair. On \(z=f\), the outward normal is \(+\hat
 \Phi_z
 &=\int_c^d\int_a^bR(x,y,f)\,dx\,dy
 +\int_c^d\int_a^b[-R(x,y,e)]\,dx\,dy\\
-&=\int_c^d\int_a^b\big[R(x,y,f)-R(x,y,e)\big],dx\,dy\\
+&=\int_c^d\int_a^b\big[R(x,y,f)-R(x,y,e)\big]dx\,dy\\
 &=\int_c^d\int_a^b\left[\int_e^f\frac{\partial R}{\partial z}\,dz\right]dx\,dy
 &&\text{[Fundamental Theorem of Calculus: \(\int_e^f G'(z)\,dz=G(f)-G(e)\)]}\\
 &=\int_c^d\int_a^b\int_e^f\frac{\partial R}{\partial z}\,dz\,dx\,dy\\
