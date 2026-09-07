@@ -68,6 +68,30 @@ For a simple example, let \(\phi(x,y)=x^2+y^2\). This scalar field gives the num
 
 At \((1,2)\), the gradient is \(2\hat i+4\hat j\): an arrow pointing away from the origin. It tells us the quickest direction in which the values of \(x^2+y^2\) rise.
 
+### Geometrical interpretation: steepest rise and level surfaces
+
+Fix one value \(c\). The set of points where \(\phi(x,y,z)=c\) is a **level surface**: every point on it has the same scalar-field reading. For temperature, it is an imaginary sheet joining all points with the same temperature; for altitude, it is a contour surface of equal height.
+
+If you walk a tiny distance \(d\vec r\) *along* a level surface, the reading does not change, so \(d\phi=0\). The differential relation is
+
+> [!IMPORTANT]
+> **Exam formula — geometric meaning of the gradient**
+>
+> \[
+> d\phi=\nabla\phi\cdot d\vec r.
+> \]
+>
+> Along a level surface, \(d\phi=0\), so \(\nabla\phi\) is perpendicular to every tangent direction \(d\vec r\). Therefore \(\nabla\phi\) is normal to the level surface \(\phi=c\).
+
+The dot product also explains “steepest.” If \(\hat u\) is a unit direction, the rate of change of \(\phi\) in that direction is \(\nabla\phi\cdot\hat u\). This is largest when \(\hat u\) points in exactly the same direction as \(\nabla\phi\). The largest rate is \(|\nabla\phi|\).
+
+> [!IMPORTANT]
+> **Exam interpretation of \(\nabla\phi\)**
+>
+> \(\nabla\phi\) points in the direction of maximum increase of \(\phi\); \(|\nabla\phi|\) is that maximum rate of increase; and \(\nabla\phi\) is normal to the level surface \(\phi=c\).
+
+For \(\phi=x^2+y^2+z^2\), the level surfaces \(\phi=c\) are spheres centered at the origin. Its gradient \(\nabla\phi=2x\hat i+2y\hat j+2z\hat k\) points directly outward, which is perpendicular to a sphere and is the direction in which distance from the origin increases fastest.
+
 ### A quick recognition test
 
 - If the output is a single expression such as \(\phi=x^2+y^2+z^2\), it is a scalar field.
