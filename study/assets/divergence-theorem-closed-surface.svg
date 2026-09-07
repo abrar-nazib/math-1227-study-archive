@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+  <title id="title">Divergence theorem visual explanation</title>
+  <desc id="desc">A two-panel schematic. In the left panel, a crossing at a shared internal face is counted with opposite signs by neighbouring cells and cancels. In the right panel, only flow crossing the outer closed surface remains.</desc>
+  <rect width="1000" height="570" fill="#fbfcfe"/>
+  <text x="500" y="42" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123d73">Divergence theorem: why the inside becomes the outside</text>
+  <text x="500" y="72" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#31445c">A schematic slice of a closed 3D volume</text>
+
+  <!-- Left panel: internal cancellation -->
+  <rect x="55" y="115" width="410" height="330" rx="18" fill="#f1f8fc" stroke="#7baaca" stroke-width="3"/>
+  <text x="260" y="147" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#123d73">1. Inside: shared faces cancel</text>
+  <text x="260" y="172" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">Imagine the volume divided into tiny neighbouring boxes.</text>
+  <rect x="115" y="220" width="130" height="125" fill="#bfe4f6" stroke="#4388b2" stroke-width="3"/>
+  <rect x="245" y="220" width="130" height="125" fill="#d6eef9" stroke="#4388b2" stroke-width="3"/>
+  <text x="180" y="365" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">one tiny box</text>
+  <text x="310" y="365" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">neighbouring box</text>
+  <path d="M160 282 H334" stroke="#ba3c37" stroke-width="8"/>
+  <path d="M334 270 L355 282 L334 294 Z" fill="#ba3c37"/>
+  <path d="M245 215 V350" stroke="#9b332f" stroke-width="6"/>
+  <text x="180" y="395" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#9b332f">leaving: +</text>
+  <text x="310" y="395" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#9b332f">entering: −</text>
+  <text x="260" y="425" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9b332f">same crossing, opposite signs → cancels</text>
+
+  <!-- Centre relation -->
+  <path d="M485 285 H535" stroke="#123d73" stroke-width="5"/>
+  <path d="M525 272 L548 285 L525 298 Z" fill="#123d73"/>
+  <text x="510" y="255" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">after all internal</text>
+  <text x="510" y="275" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">cancellations</text>
+
+  <!-- Right panel: outer flux -->
+  <rect x="560" y="115" width="385" height="330" rx="18" fill="#f1f8fc" stroke="#7baaca" stroke-width="3"/>
+  <text x="752" y="147" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#123d73">2. Outside: the shell remains</text>
+  <text x="752" y="172" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#516171">Only crossings through the closed outer surface survive.</text>
+  <rect x="665" y="215" width="175" height="145" fill="#d9f0fa" fill-opacity="0.66" stroke="#4388b2" stroke-width="4"/>
+  <text x="752" y="305" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#315a78">closed outer surface</text>
+  <!-- explicit outward arrows -->
+  <g fill="#007c83" stroke="#007c83" stroke-width="6">
+    <path d="M700 360 V395"/><path d="M690 392 L700 411 L710 392 Z"/>
+    <path d="M770 360 V395"/><path d="M760 392 L770 411 L780 392 Z"/>
+    <path d="M665 255 H625"/><path d="M628 245 L609 255 L628 265 Z"/>
+    <path d="M665 320 H625"/><path d="M628 310 L609 320 L628 330 Z"/>
+    <path d="M840 255 H880"/><path d="M877 245 L896 255 L877 265 Z"/>
+    <path d="M840 320 H880"/><path d="M877 310 L896 320 L877 330 Z"/>
+  </g>
+  <text x="752" y="430" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#007c83">total outward flux</text>
+
+  <path d="M105 500 H895" stroke="#d2dde7" stroke-width="2"/>
+  <text x="500" y="535" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#31445c">Divergence theorem: total local source strength inside the volume equals total outward flux through its closed surface.</text>
+</svg>

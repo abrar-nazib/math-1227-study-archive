@@ -17,7 +17,13 @@ Both theorems turn a difficult integral into a related integral over a different
 
 ## 2. Divergence: source strength at one point
 
-Imagine a very tiny balloon around one point in a vector field. If more fluid leaves the balloon than enters it, that point behaves like a source. If more enters than leaves, it behaves like a sink. **Divergence** measures this net outward tendency per unit volume.
+Imagine a very tiny balloon around one location in a vector field. Compare all fluid entering through its skin with all fluid leaving through its skin:
+
+- if more leaves than enters, fluid must be added somewhere inside the balloon. The location behaves mathematically like a **source**: it supplies fluid to its surroundings;
+- if more enters than leaves, fluid must be removed somewhere inside the balloon. The location behaves mathematically like a **sink**: it takes fluid out of its surroundings;
+- if the two amounts are equal, there is no net addition or removal inside the balloon.
+
+The “source” or “sink” is not necessarily a literal tiny object sitting at a mathematical point. It describes the local balance the vector field behaves **as if** it has. **Divergence** measures this net outward tendency per unit volume.
 
 > [!IMPORTANT]
 > **Exam term — divergence**
@@ -58,6 +64,10 @@ The positive result matches the picture: every arrow points away from the origin
 A **closed surface** completely encloses a volume: the skin of a ball, all six faces of a box, or the complete outer shell of a tetrahedron. It has no boundary edge.
 
 The outward normal is the normal pointing away from the enclosed solid. It sets the positive direction for flux.
+
+![A closed box surface surrounds tiny volume cells; flux through shared internal faces cancels, leaving outward flux through the outer shell.](../assets/divergence-theorem-closed-surface.svg)
+
+*Picture the box as being cut into tiny boxes. At every shared internal face, one tiny box counts flow as leaving while its neighbour counts the same flow as entering. Those two contributions cancel. The arrows crossing the outside shell are the ones that remain.*
 
 > [!IMPORTANT]
 > **Exam theorem — divergence theorem**

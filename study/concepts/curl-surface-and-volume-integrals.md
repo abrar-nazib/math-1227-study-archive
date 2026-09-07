@@ -54,6 +54,43 @@ Write the vector field as \(\vec F=P\hat i+Q\hat j+R\hat k\). The letters \(P\),
 
 Read \(\nabla\times\vec F\) as “curl of \(\vec F\).” At exam time, do not try to derive this formula; identify \(P,Q,R\), then calculate its three components one at a time.
 
+### Memory aid: the determinant pattern
+
+Yes—the curl formula has the same determinant-style layout used for a cross product. It is a **memory aid** for arranging the components and signs:
+
+> [!IMPORTANT]
+> **Exam memory aid — curl determinant layout**
+>
+> \[
+> \nabla\times\vec F=
+> \begin{vmatrix}
+> \hat i&\hat j&\hat k\\
+> \dfrac{\partial}{\partial x}&\dfrac{\partial}{\partial y}&\dfrac{\partial}{\partial z}\\
+> P&Q&R
+> \end{vmatrix}.
+> \]
+
+Read its three rows as: **direction row**, **differentiate row**, **field-component row**.
+
+Expand it exactly as you expand a three-by-three cross-product determinant: use the first column for the \(\hat i\)-part, the second column for the \(\hat j\)-part, and the third column for the \(\hat k\)-part. The signs follow the pattern **plus, minus, plus**:
+
+\[
+\begin{aligned}
+\nabla\times\vec F
+&=\hat i\left(\frac{\partial}{\partial y}R-\frac{\partial}{\partial z}Q\right)
+-\hat j\left(\frac{\partial}{\partial x}R-\frac{\partial}{\partial z}P\right)
++\hat k\left(\frac{\partial}{\partial x}Q-\frac{\partial}{\partial y}P\right)\\
+&=\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\hat i
++\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\hat j
++\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\hat k.
+\end{aligned}
+\]
+
+The middle component is where most sign mistakes happen. Keep its determinant form, with the visible minus sign, until you expand its bracket. Only then rewrite it in the final curl-formula order.
+
+> [!TIP]
+> In the first few problems, write the determinant layout every time. After enough repetitions, the component formula becomes easier to recall naturally.
+
 ### Small worked example
 
 Let
