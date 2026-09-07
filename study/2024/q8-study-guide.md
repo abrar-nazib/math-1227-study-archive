@@ -18,7 +18,7 @@ Matching powers \(x^3y'''\), \(xy'\), and \(y\) identify an Euler–Cauchy equat
 
 ### Detailed answer
 
-For the homogeneous equation,
+The full equation is **non-homogeneous** because its right side, \(x^2\ln x+3x\), is not zero. To find the complementary function (CF), temporarily remove this forcing term and solve the associated homogeneous equation:
 
 \[
 x^3y'''+2xy'-2y=0,
