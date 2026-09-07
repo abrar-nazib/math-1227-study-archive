@@ -104,6 +104,31 @@ The **determinant** of a square matrix is one number that detects whether the ma
 > \begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc.
 > \]
 
+### Expanding a \(3\times3\) determinant along the first row
+
+For a \(3\times3\) determinant, **cofactor expansion** means breaking it into three \(2\times2\) determinants. Choose one row or column. In Q5 we choose the first row because its signs follow the easy pattern \(+,-,+\):
+
+> [!IMPORTANT]
+> **Exam formula — first-row cofactor expansion**
+>
+> \[
+> \begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}
+> =a\begin{vmatrix}e&f\\h&i\end{vmatrix}
+> -b\begin{vmatrix}d&f\\g&i\end{vmatrix}
+> +c\begin{vmatrix}d&e\\g&h\end{vmatrix}.
+> \]
+
+To make the first small determinant, cover the first entry \(a\), then delete its entire row and column; the four uncovered entries are \(e,f,h,i\). Do the same for \(b\) and \(c\). The original entries \(a,b,c\) stay in front as multipliers. The middle term is subtracted because its cofactor sign is negative.
+
+The safe order is always:
+
+1. write the three terms with their \(+,-,+\) signs;
+2. calculate each small determinant using \(ad-bc\);
+3. multiply by the original first-row entry in front of it;
+4. add the three resulting contributions.
+
+Do not combine terms before every small determinant has been evaluated. The detailed Q5 calculation applies this exact routine.
+
 If a matrix has determinant \(0\), it is called **singular**. It squashes at least one nonzero input vector down to the zero vector. If its determinant is not zero, it is **non-singular** and no nonzero vector can be sent to zero.
 
 We need \((A-\lambda I)\vec v=\vec0\) to have a nonzero vector \(\vec v\). Therefore \(A-\lambda I\) must be singular:

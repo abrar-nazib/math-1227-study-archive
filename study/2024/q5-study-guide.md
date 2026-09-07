@@ -60,6 +60,9 @@ Expand the determinant along the first row. The cofactor signs are \(+,-,+\):
 
 Evaluate the three \(2\times2\) determinants:
 
+> [!TIP]
+> This line is three separate uses of \(\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc\), followed by adding the three cofactor-expansion contributions. Read [Expanding a \(3\times3\) determinant along the first row](../concepts/eigenvalues-eigenvectors-and-linear-systems.md#expanding-a-3times3-determinant-along-the-first-row) before continuing if this transition is not yet clear.
+
 \[
 \det(A-\lambda I)
 =(1-\lambda)\bigl((2-\lambda)(-1-\lambda)-1\cdot1\bigr)
