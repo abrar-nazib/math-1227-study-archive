@@ -44,6 +44,58 @@ Any real square matrix can be separated into a mirror-preserving part and a sign
 
 The addition \(A+A^T\) pairs each entry with its reflected partner and makes both positions agree. The subtraction \(A-A^T\) makes reflected partners opposite. Dividing by \(2\) prevents the pieces from being counted twice.
 
+### \(3\times3\) examples: spotting symmetry
+
+For
+
+\[
+P=\begin{pmatrix}
+2&3&-1\\
+3&0&4\\
+-1&4&5
+\end{pmatrix},
+\]
+
+the transpose is
+
+\[
+P^T=\begin{pmatrix}
+2&3&-1\\
+3&0&4\\
+-1&4&5
+\end{pmatrix}=P.
+\]
+
+For instance, the entry \(3\) at position \((1,2)\) matches the \(3\) at position \((2,1)\); the entry \(-1\) at \((1,3)\) matches the \(-1\) at \((3,1)\). Thus \(P\) is symmetric.
+
+In contrast, let
+
+\[
+Q=\begin{pmatrix}
+0&2&-3\\
+-2&0&1\\
+3&-1&0
+\end{pmatrix}.
+\]
+
+Then
+
+\[
+Q^T=\begin{pmatrix}
+0&-2&3\\
+2&0&-1\\
+-3&1&0
+\end{pmatrix}
+=-\begin{pmatrix}
+0&2&-3\\
+-2&0&1\\
+3&-1&0
+\end{pmatrix}
+=-Q.
+\]
+
+So \(Q\) is skew-symmetric. Notice the useful quick check: all of its diagonal entries are zero.
+
 ## 3. Minor, cofactor, and adjoint (adjugate)
 
 For a square matrix \(A\), the **minor** \(M_{ij}\) is the determinant left after deleting row \(i\) and column \(j\). The corresponding **cofactor** includes an alternating sign:
@@ -90,6 +142,98 @@ For the \(2\times2\) example,
 \operatorname{adj}(A)=\begin{pmatrix}d&-b\\-c&a\end{pmatrix}.
 \]
 
+### \(3\times3\) adjoint example
+
+Use the symmetric matrix
+
+\[
+R=\begin{pmatrix}
+1&2&0\\
+2&1&0\\
+0&0&3
+\end{pmatrix}.
+\]
+
+The cofactor at each position is found by deleting its row and column. The signs follow the checkerboard pattern
+
+\[
+\begin{pmatrix}
++&-&+\\
+-&+&-\\
++&-&+
+\end{pmatrix}.
+\]
+
+Calculate every cofactor:
+
+\[
+C_{11}=(+1)\begin{vmatrix}1&0\\0&3\end{vmatrix}
+=(+1)(1\cdot3-0\cdot0)=3,
+\]
+
+\[
+C_{12}=(-1)\begin{vmatrix}2&0\\0&3\end{vmatrix}
+=(-1)(2\cdot3-0\cdot0)=-6,
+\]
+
+\[
+C_{13}=(+1)\begin{vmatrix}2&1\\0&0\end{vmatrix}
+=(+1)(2\cdot0-1\cdot0)=0,
+\]
+
+\[
+C_{21}=(-1)\begin{vmatrix}2&0\\0&3\end{vmatrix}
+=(-1)(2\cdot3-0\cdot0)=-6,
+\]
+
+\[
+C_{22}=(+1)\begin{vmatrix}1&0\\0&3\end{vmatrix}
+=(+1)(1\cdot3-0\cdot0)=3,
+\]
+
+\[
+C_{23}=(-1)\begin{vmatrix}1&2\\0&0\end{vmatrix}
+=(-1)(1\cdot0-2\cdot0)=0,
+\]
+
+\[
+C_{31}=(+1)\begin{vmatrix}2&0\\1&0\end{vmatrix}
+=(+1)(2\cdot0-0\cdot1)=0,
+\]
+
+\[
+C_{32}=(-1)\begin{vmatrix}1&0\\2&0\end{vmatrix}
+=(-1)(1\cdot0-0\cdot2)=0,
+\]
+
+\[
+C_{33}=(+1)\begin{vmatrix}1&2\\2&1\end{vmatrix}
+=(+1)(1\cdot1-2\cdot2)=-3.
+\]
+
+Thus the cofactor matrix is
+
+\[
+C=\begin{pmatrix}
+3&-6&0\\
+-6&3&0\\
+0&0&-3
+\end{pmatrix}.
+\]
+
+Transpose it to form the adjoint:
+
+\[
+\operatorname{adj}(R)=C^T
+=\begin{pmatrix}
+3&-6&0\\
+-6&3&0\\
+0&0&-3
+\end{pmatrix}.
+\]
+
+Here \(C^T=C\), so the adjoint is visibly symmetric. This concrete calculation shows the general result proved in the next section.
+
 ### Why symmetric matrices have symmetric adjoints
 
 If \(A=A^T\), entry \(a_{ij}\) matches \(a_{ji}\). After deleting row \(i\), column \(j\), the remaining matrix is the transpose of the matrix obtained by deleting row \(j\), column \(i\). A determinant is unchanged by transpose, so
@@ -127,6 +271,44 @@ A complex matrix is **Hermitian** if \(H^\dagger=H\). It is the complex version 
 > \]
 
 The average pairs each entry with the conjugate of its reflected partner. That makes the result Hermitian. On the diagonal, \((z+\overline z)/2\) keeps only the real part, so no imaginary diagonal entry remains.
+
+### \(3\times3\) Hermitian example
+
+Consider
+
+\[
+H=\begin{pmatrix}
+2&1+i&3-2i\\
+1-i&4&-i\\
+3+2i&i&5
+\end{pmatrix}.
+\]
+
+First conjugate every entry:
+
+\[
+\overline H=\begin{pmatrix}
+2&1-i&3+2i\\
+1+i&4&i\\
+3-2i&-i&5
+\end{pmatrix}.
+\]
+
+Now transpose:
+
+\[
+H^\dagger=(\overline H)^T
+=\begin{pmatrix}
+2&1+i&3-2i\\
+1-i&4&-i\\
+3+2i&i&5
+\end{pmatrix}
+=H.
+\]
+
+So \(H\) is Hermitian. Read one mirrored pair to see the rule: \(h_{12}=1+i\), while \(h_{21}=1-i=\overline{1+i}\). The diagonal \(2,4,5\) is real, as it must be.
+
+To practise finding a Hermitian part rather than only recognizing one, follow the full \(3\times3\) calculation in [2024 Q4(c)](../2024/q4-study-guide.md#q4c-hermitian-part).
 
 ## Quick recognition checklist
 
