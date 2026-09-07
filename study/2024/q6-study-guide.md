@@ -1,6 +1,6 @@
 # Math 1227 — 2024 Q6 study guide
 
-Read [Differential equations: the ground floor](../concepts/differential-equations-foundations.md) and [First-order ODEs](../concepts/first-order-odes-exact-integrating-factors-and-substitutions.md) before parts (b) and (c).
+Read [Matrix rank, echelon form, and normal form](../concepts/matrix-rank-echelon-form-and-normal-form.md) before part (a), then [Differential equations: the ground floor](../concepts/differential-equations-foundations.md) and [First-order ODEs](../concepts/first-order-odes-exact-integrating-factors-and-substitutions.md) before parts (b) and (c).
 
 ## Q6(a) Rank and normal form
 
@@ -8,7 +8,14 @@ Read [Differential equations: the ground floor](../concepts/differential-equatio
 
 ### Concept map
 
-The **rank** is the number of independent rows or columns. In normal form, it is the number of leading \(1\)s: \(\operatorname{diag}(I_r,0)\). Use row operations to expose pivots, then a column operation to clear the last column.
+The rank asks, “how many rows carry genuinely new information?” Elementary row operations expose that information as pivots without changing rank. Three pivots will appear. Row reduction alone reaches echelon form; the final column operation is needed because the paper specifically asks for normal form.
+
+### Solve it yourself
+
+1. Bring the row with first entry \(1\) to the top, then zero everything beneath it in column 1.
+2. Use the second pivot to zero the remaining entries beneath column 2.
+3. When a zero row appears, count the pivots: that already tells the rank.
+4. Continue: make the pivots \(1\), clear above them, then clear the remaining fourth column by a column operation.
 
 ### Detailed answer
 
@@ -65,16 +72,53 @@ We have
 \begin{pmatrix}1&-1&-2&-4\\0&5&3&7\\0&0&33&22\\0&0&0&0\end{pmatrix}.
 \]
 
-Scale the nonzero pivots and clear above them:
+Scale the two lower pivots:
 
 \[
-R_2\to\frac15R_2,\quad R_3\to\frac1{33}R_3,
-\quad R_2\to R_2-\frac35R_3,
-\quad R_1\to R_1+R_2,
-\quad R_1\to R_1+2R_3.
+R_2\to\frac15R_2,\qquad R_3\to\frac1{33}R_3.
 \]
 
-This gives
+The matrix becomes
+
+\[
+\begin{pmatrix}1&-1&-2&-4\\0&1&\frac35&\frac75\\0&0&1&\frac23\\0&0&0&0\end{pmatrix}.
+\]
+
+Clear the third entry in row 2:
+
+\[
+R_2\to R_2-\frac35R_3
+\]
+
+\[
+(0,1,\tfrac35,\tfrac75)-\tfrac35(0,0,1,\tfrac23)
+=(0,1,0,\tfrac75-\tfrac25)
+=(0,1,0,1).
+\]
+
+Clear the second entry in row 1:
+
+\[
+R_1\to R_1+R_2
+\]
+
+\[
+(1,-1,-2,-4)+(0,1,0,1)=(1,0,-2,-3).
+\]
+
+Clear the third entry in row 1:
+
+\[
+R_1\to R_1+2R_3
+\]
+
+\[
+(1,0,-2,-3)+2(0,0,1,\tfrac23)
+=(1,0,0,-3+\tfrac43)
+=(1,0,0,-\tfrac53).
+\]
+
+We now have
 
 \[
 \begin{pmatrix}1&0&0&-\frac53\\0&1&0&1\\0&0&1&\frac23\\0&0&0&0\end{pmatrix}.
