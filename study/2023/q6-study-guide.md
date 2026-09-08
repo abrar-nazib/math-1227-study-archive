@@ -154,6 +154,13 @@ x^2\frac{d^2y}{dx^2}=-x\frac{dy}{dx}.
 
 Both numerator and denominator have total degree \(2\), so the right side depends only on \(y/x\). Use \(y=vx\), then separate variables.
 
+> [!IMPORTANT]
+> **Exam recognition and substitution**
+>
+> \[
+> y=vx,\qquad \frac{dy}{dx}=v+x\frac{dv}{dx}.
+> \]
+
 ### Detailed answer
 
 Set
@@ -209,6 +216,13 @@ x\frac{dv}{dx}
 
 Separate variables:
 
+> [!IMPORTANT]
+> **Exam separated equation**
+>
+> \[
+> \frac{1-3v}{v^2}\,dv=\frac{dx}{x}.
+> \]
+
 \[
 \frac{1-3v}{v^2}\,dv=\frac{dx}{x}.
 \]
@@ -224,6 +238,13 @@ Separate variables:
 \]
 
 Substitute \(v=y/x\):
+
+> [!IMPORTANT]
+> **Exam substitution back**
+>
+> \[
+> v=\frac yx,\qquad \frac1v=\frac xy.
+> \]
 
 \[
 -\frac{x}{y}-3\ln\left|\frac{y}{x}\right|=\ln|x|+C.
