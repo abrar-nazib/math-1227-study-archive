@@ -18,12 +18,58 @@ For \(C_1:(0,0)\to(2,0)\), use
 d\vec r_1=\langle1,0\rangle dt.
 \]
 
+\(\vec F\) is a rule that expects a point \((x,y)\) and returns a vector:
+
+\[
+\vec F(x,y)=\langle2x+y,\ 3y-x\rangle.
+\]
+
+The path \(\vec r_1(t)=\langle t,0\rangle\) tells us that, at time \(t\),
+
+\[
+x=t,
+\]
+
+\[
+y=0.
+\]
+
+The notation \(\vec F(\vec r_1(t))\) means: put these path coordinates into the two slots of \(\vec F(x,y)\). Do this component by component:
+
+\[
+\vec F(\vec r_1(t))
+=\langle2x+y,\ 3y-x\rangle.
+\]
+
+\[
+=\langle2(t)+0,\ 3(0)-t\rangle.
+\]
+
+\[
+=\langle2t+0,\ 0-t\rangle.
+\]
+
+\[
+=\langle2t,-t\rangle.
+\]
+
 \[
 \vec F(\vec r_1(t))=\langle2t,-t\rangle.
 \]
 
+\(d\vec r_1=\langle1,0\rangle dt\) says that this first piece moves only horizontally: its \(x\)-change is \(dt\), and its \(y\)-change is \(0\). Now take the dot product one component at a time:
+
 \[
-\vec F\cdot d\vec r_1=\langle2t,-t\rangle\cdot\langle1,0\rangle dt=2t\,dt.
+\vec F\cdot d\vec r_1
+=\left[(2t)(1)+(-t)(0)\right]dt.
+\]
+
+\[
+=\left[2t+0\right]dt.
+\]
+
+\[
+=2t\,dt.
 \]
 
 [Power rule: \(\int t^n\,dt=t^{n+1}/(n+1)+C\).]
