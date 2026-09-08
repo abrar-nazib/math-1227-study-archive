@@ -248,7 +248,7 @@ For the 2024 Q3(b) missing face, the compatible pair used in the guide is normal
 
 Stokes’ theorem depends only on the boundary curve \(C\), not on the particular spanning surface chosen. If two surfaces have the same boundary and compatible orientation, either surface gives the same answer.
 
-This is the key to Q3(b). The given surface consists of all faces of a tetrahedron **except** the face in the \(xz\)-plane. The missing face is \(y=0\). Its triangular edge is the boundary curve of the remaining surface.
+This is the key to 2024 Q3(b). The given surface consists of all faces of a tetrahedron **except** the face in the \(xz\)-plane. The missing face is \(y=0\). Its triangular edge is the boundary curve of the remaining surface.
 
 ![A tetrahedron with the xz-plane face removed; the highlighted triangle is the boundary curve for the remaining surface.](../assets/stokes-missing-face-boundary.svg)
 
@@ -257,8 +257,8 @@ Instead of integrating curl over the three remaining faces, use the simple missi
 > [!TIP]
 > In a verification question, calculate both sides of Stokes’ theorem. You may use the easiest surface with the same boundary to calculate the surface side, but the boundary direction and normal must remain compatible.
 
-## 6. Q3 checklist
+## 6. 2024 Q3 checklist
 
-For Q3(a): state all hypotheses; state the theorem; prove it first for a rectangular box by pairing opposite faces; explain cancellation of internal faces for a general solid.
+For 2024 Q3(a): state all hypotheses; state the theorem; prove it first for a rectangular box by pairing opposite faces; explain cancellation of internal faces for a general solid.
 
-For Q3(b): identify the omitted face; draw its triangular boundary; choose compatible orientation; calculate curl; calculate the line integral around all three edges; calculate the curl flux through the simple triangle; compare the two results.
+For 2024 Q3(b): identify the omitted face; draw its triangular boundary; choose compatible orientation; calculate curl; calculate the line integral around all three edges; calculate the curl flux through the simple triangle; compare the two results.

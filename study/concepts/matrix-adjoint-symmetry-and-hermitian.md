@@ -1,6 +1,6 @@
 # Matrix adjoint, symmetry, and Hermitian matrices
 
-This note is the small matrix toolkit needed for 2024 Q4. A matrix is a rectangular arrangement of numbers. Its entry in row \(i\), column \(j\) is written \(a_{ij}\). Q4 uses square matrices: the same number of rows and columns.
+This note is the small matrix toolkit needed for 2024 Q4. A matrix is a rectangular arrangement of numbers. Its entry in row \(i\), column \(j\) is written \(a_{ij}\). 2024 Q4 uses square matrices: the same number of rows and columns.
 
 ## 1. Transpose: reflecting entries across the main diagonal
 
