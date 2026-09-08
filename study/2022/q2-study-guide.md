@@ -163,24 +163,75 @@ The first-octant cylindrical patch has \(0\le\theta\le\pi/2\), \(0\le z\le5\). U
 \vec r(\theta,z)=\langle4\cos\theta,4\sin\theta,z\rangle.
 \]
 
+The cylinder equation says \(x^2+y^2=4^2\): every point is distance \(4\) from the \(z\)-axis. The angle \(\theta\) walks around that circle; the height \(z\) walks up the cylinder. “First octant” means \(x\ge0,\ y\ge0,\ z\ge0\). Thus only the quarter-circle from the positive \(x\)-axis to the positive \(y\)-axis is used:
+
 \[
-\vec r_\theta=\langle-4\sin\theta,4\cos\theta,0\rangle,
-\qquad
+0\le\theta\le\frac\pi2,\qquad0\le z\le5.
+\]
+
+At a tiny patch we need the oriented area vector, not just an area number:
+
+> [!IMPORTANT]
+> \[
+> \hat n\,dS=(\vec r_\theta\times\vec r_z)\,d\theta\,dz.
+> \]
+
+First differentiate each coordinate separately:
+
+\[
+\frac{\partial(4\cos\theta)}{\partial\theta}=-4\sin\theta,\qquad
+\frac{\partial(4\sin\theta)}{\partial\theta}=4\cos\theta,\qquad
+\frac{\partial z}{\partial\theta}=0.
+\]
+
+\[
+\vec r_\theta=\langle-4\sin\theta,4\cos\theta,0\rangle.
+\]
+
+\[
+\frac{\partial(4\cos\theta)}{\partial z}=0,\qquad
+\frac{\partial(4\sin\theta)}{\partial z}=0,\qquad
+\frac{\partial z}{\partial z}=1.
+\]
+
+\[
 \vec r_z=\langle0,0,1\rangle.
 \]
 
 \[
-\vec r_\theta\times\vec r_z=\langle4\cos\theta,4\sin\theta,0\rangle.
+\vec r_\theta\times\vec r_z
+=\begin{vmatrix}\hat i&\hat j&\hat k\\-4\sin\theta&4\cos\theta&0\\0&0&1\end{vmatrix}.
+\]
+
+\[
+=\langle(4\cos\theta)(1)-0(0),\ 0(0)-(-4\sin\theta)(1),\ (-4\sin\theta)(0)-(4\cos\theta)(0)\rangle.
+\]
+
+\[
+=\langle4\cos\theta,4\sin\theta,0\rangle.
 \]
 
 Its horizontal components point away from the \(z\)-axis, so it is outward.
 
 \[
-\phi(\vec r)=\frac38(4\cos\theta)(4\sin\theta)z=6z\cos\theta\sin\theta.
+\phi(\vec r)=\frac38\cdot16\cos\theta\sin\theta\cdot z
+=6z\cos\theta\sin\theta.
 \]
 
 \[
 \phi(\vec r)(\vec r_\theta\times\vec r_z)
+=6z\cos\theta\sin\theta\langle4\cos\theta,4\sin\theta,0\rangle.
+\]
+
+\[
+=\langle
+(6z\cos\theta\sin\theta)(4\cos\theta),\
+(6z\cos\theta\sin\theta)(4\sin\theta),\
+(6z\cos\theta\sin\theta)(0)
+\rangle.
+\]
+
+\[
 =\langle24z\cos^2\theta\sin\theta,\ 24z\cos\theta\sin^2\theta,\ 0\rangle.
 \]
 
@@ -190,7 +241,7 @@ Its horizontal components point away from the \(z\)-axis, so it is outward.
 \langle24z\cos^2\theta\sin\theta,\ 24z\cos\theta\sin^2\theta,\ 0\rangle d\theta\,dz.
 \]
 
-[Substitution: with \(u=\cos\theta\), \(du=-\sin\theta\,d\theta\); similarly use \(u=\sin\theta\) for the second component.]
+This is a vector integral: integrate each component separately.
 
 \[
 \int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta
@@ -208,6 +259,12 @@ Its horizontal components point away from the \(z\)-axis, so it is outward.
 \int_0^5 24z\left(\frac13\right)dz
 =8\int_0^5z\,dz
 =8\left[\frac{z^2}{2}\right]_0^5=100.
+\]
+
+The second component has the same final value:
+
+\[
+\int_0^5 24z\left(\frac13\right)dz=100.
 \]
 
 \[
