@@ -142,6 +142,52 @@ A^n=I+nN
 
 for every positive integer \(n\).
 
+### Why \(N^2=0\) makes the powers of \(A\) simple
+
+This is the bridge: \(A\) is not \(N\); it is \(I+N\). Every time we multiply by another \(A\), we multiply by one more \((I+N)\). The only potentially troublesome new term contains \(N^2\), and that term becomes zero.
+
+Build the first few powers before using induction:
+
+\[
+A^2=(I+N)(I+N).
+\]
+
+\[
+=I\cdot I+I\cdot N+N\cdot I+N\cdot N.
+\]
+
+\[
+=I+N+N+N^2.
+\]
+
+\[
+=I+2N+0=I+2N.
+\]
+
+For the next power, use the result just found:
+
+\[
+A^3=A^2A.
+\]
+
+\[
+=(I+2N)(I+N).
+\]
+
+\[
+=I\cdot I+I\cdot N+2N\cdot I+2N\cdot N.
+\]
+
+\[
+=I+N+2N+2N^2.
+\]
+
+\[
+=I+3N+2(0)=I+3N.
+\]
+
+The coefficient of \(N\) increased from \(2\) to \(3\). Induction is simply the proof that this same step always changes \(k\) into \(k+1\); it is not a separate trick from the two calculations above.
+
 For \(n=1\),
 
 \[
