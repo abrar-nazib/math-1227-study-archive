@@ -84,6 +84,48 @@ For \(C_2:(2,0)\to(3,2)\), use
 \vec r_2(t)=\langle2+t,2t\rangle,\qquad0\le t\le1.
 \]
 
+This is not a formula to memorize blindly. Start at
+
+\[
+\langle2,0\rangle.
+\]
+
+To reach \(\langle3,2\rangle\), the required change is
+
+\[
+\langle3,2\rangle-\langle2,0\rangle
+=\langle3-2,2-0\rangle
+=\langle1,2\rangle.
+\]
+
+Multiply that whole movement by \(t\), then add it to the start:
+
+\[
+\vec r_2(t)=\langle2,0\rangle+t\langle1,2\rangle.
+\]
+
+\[
+=\langle2,0\rangle+\langle t,2t\rangle.
+\]
+
+\[
+=\langle2+t,2t\rangle.
+\]
+
+At \(t=0\), it gives the starting point:
+
+\[
+\vec r_2(0)=\langle2+0,2(0)\rangle=\langle2,0\rangle.
+\]
+
+At \(t=1\), it gives the ending point:
+
+\[
+\vec r_2(1)=\langle2+1,2(1)\rangle=\langle3,2\rangle.
+\]
+
+Every value between \(0\) and \(1\) gives a point between them, so this traces exactly the required straight piece.
+
 \[
 d\vec r_2=\langle1,2\rangle dt.
 \]
