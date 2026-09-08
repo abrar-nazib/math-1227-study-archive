@@ -153,6 +153,60 @@ With downward orientation, the answer is \(\langle-2,-1,-2\rangle\).
 3. “Clockwise viewed from above” is compatible with a downward normal. Keep that choice on both sides.
 4. Use a clockwise circle parameterization for the line side and polar coordinates for the curved surface side.
 
+### How the clockwise direction determines the downward normal
+
+The rim lies in the horizontal plane \(z=2\). The word “clockwise” needs a viewing side; for this horizontal circle, use the standard convention that it is viewed from the positive-\(z\) side, looking down toward the \(xy\)-plane. In that view, the ordinary circle parameterization
+
+\[
+\vec r_{\mathrm{ordinary}}(\theta)
+=\langle2\cos\theta,2\sin\theta,2\rangle,
+\qquad0\le\theta\le2\pi,
+\]
+
+starts at the rightmost point when \(\theta=0\):
+
+\[
+\vec r_{\mathrm{ordinary}}(0)=\langle2,0,2\rangle.
+\]
+
+At the next familiar angle, \(\theta=\pi/2\), it is at the top of the circle:
+
+\[
+\vec r_{\mathrm{ordinary}}\left(\frac{\pi}{2}\right)
+=\langle0,2,2\rangle.
+\]
+
+So it travels **right \(\to\) top**, which is counter-clockwise when viewed from above. The question instead says clockwise. Reverse the vertical coordinate:
+
+\[
+\vec r_{\mathrm{clockwise}}(\theta)
+=\langle2\cos\theta,-2\sin\theta,2\rangle.
+\]
+
+It still begins at the rightmost point:
+
+\[
+\vec r_{\mathrm{clockwise}}(0)
+=\langle2,0,2\rangle,
+\]
+
+but now, at \(\theta=\pi/2\), it reaches the bottom:
+
+\[
+\vec r_{\mathrm{clockwise}}\left(\frac{\pi}{2}\right)
+=\langle0,-2,2\rangle.
+\]
+
+So it travels **right \(\to\) bottom**, which is clockwise.
+
+Stokes’ theorem requires the boundary direction and surface normal to be a matching pair. Apply the right-hand rule: curl the fingers of your right hand in the direction of travel. With clockwise travel as you look from above, your thumb points downward. Thus the compatible normal points toward negative \(z\):
+
+\[
+\hat n\text{ has a negative }z\text{-component}.
+\]
+
+For this question, we do **not** calculate that the route is clockwise; the paper gives it. We choose a parameterization that follows the given route, then choose the normal that matches it. A counter-clockwise route viewed from above would instead require an upward normal.
+
 ### Solve it yourself
 
 1. Calculate \(\nabla\times\vec A\).
@@ -322,7 +376,7 @@ The bound \(r\le2\) comes from the rim \(x^2+y^2=4\). The natural cross product 
 =\langle-r^2\cos\theta,-r^2\sin\theta,r\rangle.
 \]
 
-Thus the downward oriented area vector is
+Its third component is \(r\), and \(0\le r\le2\), so this cross product has a non-negative \(z\)-component: it is the **upward** area vector. But the already-given clockwise boundary requires downward orientation. Therefore reverse the vector; equivalently, use \(\vec r_\theta\times\vec r_r\) instead. Thus the downward oriented area vector is
 
 \[
 d\vec S=\langle r^2\cos\theta,r^2\sin\theta,-r\rangle dr\,d\theta.
