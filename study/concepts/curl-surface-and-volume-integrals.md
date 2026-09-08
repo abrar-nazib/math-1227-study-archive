@@ -165,7 +165,23 @@ Sometimes the question gives a scalar field \(\phi\), rather than a vector field
 \iint_S\phi\hat n\,dS.
 \]
 
-At each tiny patch, \(\phi\) supplies only a weight (one number), while \(\hat n\,dS\) supplies the oriented tiny area vector. The result is a vector. With a parameterization, avoid separately normalizing \(\hat n\): use the oriented area vector directly.
+This is a different kind of surface integral from flux, even though both use the same surface and normal. The key is that a scalar can multiply a vector: \(\phi\) supplies a size, and \(\hat n\,dS\) supplies a direction and a tiny area. Their product is a tiny **vector**:
+
+\[
+\phi\hat n\,dS.
+\]
+
+Imagine pressure acting on a curved sheet. At one tiny patch, the pressure magnitude is a scalar number. The sheet tells the pressure which way to push: straight out along its normal. The tiny force-like contribution is therefore “pressure \(\times\) normal direction \(\times\) tiny area.” Adding those little pushes gives one resultant vector. This is the same mathematical pattern as \(\iint_S\phi\hat n\,dS\).
+
+Do not confuse the three surface integrals below:
+
+| What is given at each patch? | Integral | What is added | Result |
+| --- | --- | --- | --- |
+| A scalar weight, such as coating density | \(\iint_S\phi\,dS\) | scalar amount \(\phi\,dS\) | scalar |
+| A vector field, such as wind velocity | \(\iint_S\vec F\cdot\hat n\,dS\) | only the through-sheet part of \(\vec F\) | scalar flux |
+| A scalar strength plus the normal direction | \(\iint_S\phi\hat n\,dS\) | vector amount \(\phi\hat n\,dS\) | vector |
+
+The middle case has a **dot product**, so it extracts one number from a vector field. The third case has **no dot product**: there is no vector field whose through-sheet component needs to be selected. Instead, the normal itself turns the scalar weight into a vector.
 
 > [!IMPORTANT]
 > **Exam formula — scalar-weighted oriented surface integral**
@@ -175,7 +191,21 @@ At each tiny patch, \(\phi\) supplies only a weight (one number), while \(\hat n
 > =\iint_D\phi(\vec r(u,v))\bigl(\vec r_u\times\vec r_v\bigr)\,du\,dv.
 > \]
 
-Reversing the chosen orientation reverses the resulting vector. This is the form used in 2023 Q3(a).
+The cross product \(\vec r_u\times\vec r_v\) already equals \(\hat n\,dS\): it is the oriented tiny area vector. So the method is simply:
+
+1. parameterize the surface;
+2. choose an orientation by choosing the order of the cross product;
+3. substitute the surface point into the scalar \(\phi\);
+4. multiply the scalar by that oriented area vector; and
+5. integrate its three components.
+
+For 2023 Q3(a), the plane produces the constant upward area vector \(\langle1,\tfrac12,1\rangle dx\,dy\). The scalar \(\phi\) becomes \(6x+4y-6\) on that plane. Thus each tiny patch contributes
+
+\[
+(6x+4y-6)\left\langle1,\frac12,1\right\rangle dx\,dy.
+\]
+
+That is why the final answer is a vector. Reversing the chosen orientation reverses every tiny vector and hence reverses the final vector.
 
 ### Orientation: which side is positive?
 
