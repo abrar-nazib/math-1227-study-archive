@@ -44,10 +44,6 @@ S=\frac{A+A^T}{2},\qquad K=\frac{A-A^T}{2}.
 \]
 
 \[
-S=\frac{A+A^T}{2},\qquad K=\frac{A-A^T}{2}.
-\]
-
-\[
 S+K=\frac{A+A^T+A-A^T}{2}=A.
 \]
 
@@ -86,6 +82,8 @@ S_1-S_2=0,\qquad K_2-K_1=0,
 ## Q4(c) Rank and normal form
 
 > Define rank of a matrix. Reduce the given matrix into normal form and hence find its rank.
+
+Following the class notes, the rank is the order of the largest nonzero minor; equivalently, it is the number of nonzero rows in echelon form or the number of \(1\)s in normal form.
 
 Let
 
