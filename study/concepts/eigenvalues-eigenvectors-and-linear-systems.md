@@ -1,6 +1,6 @@
 # Eigenvalues, eigenvectors, and solving linear systems
 
-This note contains the two new matrix ideas needed for 2024 Q5: a direction that a matrix transformation does not turn, and a systematic way to solve several linear equations together.
+This note contains the two matrix ideas needed for 2024 Q5 and 2023 Q5: a direction that a matrix transformation does not turn, and a systematic way to solve several linear equations together.
 
 ## Before starting: the objects in this note
 
@@ -106,7 +106,7 @@ The **determinant** of a square matrix is one number that detects whether the ma
 
 ### Expanding a \(3\times3\) determinant along the first row
 
-For a \(3\times3\) determinant, **cofactor expansion** means breaking it into three \(2\times2\) determinants. Choose one row or column. In Q5 we choose the first row because its signs follow the easy pattern \(+,-,+\):
+For a \(3\times3\) determinant, **cofactor expansion** means breaking it into three \(2\times2\) determinants. Choose one row or column. In the 2024 Q5 guide we choose the first row because its signs follow the easy pattern \(+,-,+\):
 
 > [!IMPORTANT]
 > **Exam formula — first-row cofactor expansion**
@@ -127,7 +127,7 @@ The safe order is always:
 3. multiply by the original first-row entry in front of it;
 4. add the three resulting contributions.
 
-Do not combine terms before every small determinant has been evaluated. The detailed Q5 calculation applies this exact routine.
+Do not combine terms before every small determinant has been evaluated. The detailed 2024 Q5 calculation applies this exact routine.
 
 If a matrix has determinant \(0\), it is called **singular**. It squashes at least one nonzero input vector down to the zero vector. If its determinant is not zero, it is **non-singular** and no nonzero vector can be sent to zero.
 
