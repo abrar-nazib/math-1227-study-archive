@@ -23,6 +23,54 @@ For example,
 
 The order usually matters: \(AB\) is not generally \(BA\). A particular pair is called **commutative** only when \(AB=BA\).
 
+### What “commutative matrices” really means
+
+Matrices can be pictured as transformation machines. In the product \(AB\), the rightmost machine \(B\) acts first, then \(A\) acts on the result. In \(BA\), the order is reversed: first \(A\), then \(B\).
+
+Two matrices **commute** when those two routes always give the same final output. In plain language: applying \(A\) then \(B\) has exactly the same overall effect as applying \(B\) then \(A\). It is a property of the **pair** of matrices, not a label attached to one matrix by itself.
+
+For a concrete non-commuting pair, let
+
+\[
+A=\begin{pmatrix}1&1\\0&1\end{pmatrix},
+\qquad
+B=\begin{pmatrix}2&0\\0&1\end{pmatrix}.
+\]
+
+Calculate \(AB\):
+
+\[
+AB=
+\begin{pmatrix}1&1\\0&1\end{pmatrix}
+\begin{pmatrix}2&0\\0&1\end{pmatrix}
+=\begin{pmatrix}
+1(2)+1(0)&1(0)+1(1)\\
+0(2)+1(0)&0(0)+1(1)
+\end{pmatrix}.
+\]
+
+\[
+AB=\begin{pmatrix}2&1\\0&1\end{pmatrix}.
+\]
+
+Now reverse the order:
+
+\[
+BA=
+\begin{pmatrix}2&0\\0&1\end{pmatrix}
+\begin{pmatrix}1&1\\0&1\end{pmatrix}
+=\begin{pmatrix}
+2(1)+0(0)&2(1)+0(1)\\
+0(1)+1(0)&0(1)+1(1)
+\end{pmatrix}.
+\]
+
+\[
+BA=\begin{pmatrix}2&2\\0&1\end{pmatrix}.
+\]
+
+The two final matrices differ, so this pair does **not** commute. In 2023 Q4(a), the proof shows that for two symmetric matrices, their product is symmetric exactly when this order difference disappears.
+
 > [!IMPORTANT]
 > **Exam formula — transpose reverses product order**
 >

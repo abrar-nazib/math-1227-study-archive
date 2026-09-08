@@ -13,6 +13,8 @@ Read [Matrix adjoint, symmetry, and Hermitian matrices](../concepts/matrix-adjoi
 3. Transposing a product reverses order: \((AB)^T=B^TA^T\).
 4. “If and only if” requires a proof in both directions.
 
+Before the proof, read [What “commutative matrices” really means](../concepts/matrix-products-powers-and-orthogonality.md#what-commutative-matrices-really-means). It explains the idea as two transformation machines applied in different orders, with a full small example.
+
 ### Solve it yourself
 
 1. Start by calculating \((AB)^T\), then replace \(A^T,B^T\) using symmetry.
