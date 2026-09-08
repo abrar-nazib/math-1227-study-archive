@@ -30,6 +30,10 @@ When the student asks a clarification question, answer it directly and inspect t
 - Point the student to the exact concept note and section that now contains the explanation.
 - Do not change unrelated study files in response to a clarification question.
 
+## Definitions from class notes
+
+When an exam question asks to define a term, consult the relevant stored class-note OCR before writing the definition. Give a clear, faithful expression of the class-note definition in the study guide, preserving its mathematical meaning while repairing OCR mistakes and unclear wording. Do not replace it with an unrelated generic textbook definition. If the class note is unreadable or lacks that definition, say so and use a standard definition, clearly identified as such.
+
 ## Guide design
 
 For each requested question or sub-question:

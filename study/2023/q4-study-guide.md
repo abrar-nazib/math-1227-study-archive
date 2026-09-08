@@ -20,7 +20,13 @@ Read [Matrix adjoint, symmetry, and Hermitian matrices](../concepts/matrix-adjoi
 
 ### Detailed answer
 
-A **matrix** is a rectangular array of numbers arranged in rows and columns. A real square matrix \(M\) is **symmetric** when
+Following the class notes, a **matrix of order \(m\times n\)** is an arrangement of \(mn\) numbers in a rectangular array of \(m\) rows and \(n\) columns. A real square matrix \(M=(m_{ij})\) is **symmetric** when the entry at row \(i\), column \(j\) equals the reflected entry at row \(j\), column \(i\):
+
+\[
+m_{ij}=m_{ji}\quad\text{for all }i,j.
+\]
+
+Equivalently, its transpose is unchanged:
 
 \[
 M^T=M.
