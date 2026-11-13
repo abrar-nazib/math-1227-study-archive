@@ -190,7 +190,54 @@ The vectors \(\hat i\), \(\hat j\), and \(\hat k\) point in three independent co
 \end{aligned}
 \]
 
-The scalars in the notes are
+### How are the scalars found?
+
+They are found by solving those three simultaneous equations. The handwritten notes skip that calculation; the values are not chosen by intuition. Let us eliminate one unknown at a time.
+
+Add the second equation to the third. Their \(\alpha_1\) terms cancel:
+
+\[
+\begin{aligned}
+(-\alpha_1+3\alpha_2+\alpha_3)
++(\alpha_1-2\alpha_2-3\alpha_3)&=2+5,\\
+\alpha_2-2\alpha_3&=7. \tag{4}
+\end{aligned}
+\]
+
+Add twice the second equation to the first. Again \(\alpha_1\) cancels:
+
+\[
+\begin{aligned}
+(2\alpha_1+\alpha_2-2\alpha_3)
++2(-\alpha_1+3\alpha_2+\alpha_3)&=3+2(2),\\
+2\alpha_1+\alpha_2-2\alpha_3-2\alpha_1+6\alpha_2+2\alpha_3&=7,\\
+7\alpha_2&=7,\\
+\alpha_2&=1.
+\end{aligned}
+\]
+
+Substitute \(\alpha_2=1\) into equation (4):
+
+\[
+\begin{aligned}
+1-2\alpha_3&=7,\\
+-2\alpha_3&=6,\\
+\alpha_3&=-3.
+\end{aligned}
+\]
+
+Finally substitute both values into the third original equation:
+
+\[
+\begin{aligned}
+\alpha_1-2(1)-3(-3)&=5,\\
+\alpha_1-2+9&=5,\\
+\alpha_1+7&=5,\\
+\alpha_1&=-2.
+\end{aligned}
+\]
+
+Thus the scalars in the notes are
 
 \[
 \alpha_1=-2,\qquad \alpha_2=1,\qquad \alpha_3=-3.
