@@ -2,7 +2,7 @@
 
 Page 7 asks us to show that three vectors are dependent, find their relation, and then show that their terminal points lie on a straight line. These are connected, but the last step needs extra reasoning: **dependent vectors do not automatically have collinear endpoints**.
 
-For the meanings of components, terminal points, and linear dependence, first revisit [vectors and planes](vectors-and-planes.md#6-linear-independence-of-vectors). For the determinant expansion used below, see [the first-row expansion](eigenvalues-eigenvectors-and-linear-systems.md#expanding-a-3times3-determinant-along-the-first-row).
+For the meanings of components, terminal points, and linear dependence, first revisit [vectors and planes](../../concepts/vectors-and-planes.md#6-linear-independence-of-vectors). For the determinant expansion used below, see [the first-row expansion](../../concepts/eigenvalues-eigenvectors-and-linear-systems.md#expanding-a-3times3-determinant-along-the-first-row).
 
 ## What the question gives
 

@@ -12,6 +12,8 @@ For rapid revision, use the [differentiation and integration quick reference](st
 
 For trigonometric identities and their common integral forms, use the [trigonometric formulas quick reference](study/concepts/trigonometric-formulas-reference.md).
 
+For explanations of individual pages from class materials, see [class-note explanations](study/class-note-explanations/README.md).
+
 | Paper | Questions |
 | --- | --- |
 | [2014](questions/2014.md) | Math-1203 |
