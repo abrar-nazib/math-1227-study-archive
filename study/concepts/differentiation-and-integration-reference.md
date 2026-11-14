@@ -73,12 +73,79 @@ Example: \(\partial(x^2y+3z)/\partial x=2xy\), because \(y,z\) are constants wit
 | \(a^x\) | \(a^x/\ln a+C\) |
 | \(\sin x\) | \(-\cos x+C\) |
 | \(\cos x\) | \(\sin x+C\) |
+| \(\cot x\) | \(\ln\lvert\sin x\rvert+C\) |
 | \(\sec^2x\) | \(\tan x+C\) |
 | \(\csc^2x\) | \(-\cot x+C\) |
 | \(\sec x\tan x\) | \(\sec x+C\) |
 | \(\csc x\cot x\) | \(-\csc x+C\) |
 | \(1/(1+x^2)\) | \(\tan^{-1}x+C\) |
+| \(x/(1+x^2)\) | \(\frac12\ln(1+x^2)+C\) |
 | \(1/\sqrt{1-x^2}\) | \(\sin^{-1}x+C\) |
+
+### Reverse chain rule: integration by substitution
+
+When an integrand contains a function of an **inside expression** and the derivative of that inside expression, substitute \(u=g(x)\). Then \(du=g'(x)\,dx\). If \(F'(u)=f(u)\), the general rule is
+
+> [!IMPORTANT]
+> **Exam formula — substitution (reverse chain rule)**
+>
+> \[
+> \int f(g(x))g'(x)\,dx=F(g(x))+C.
+> \]
+
+The inside derivative may be present only up to a constant multiplier; adjust for that constant. Useful patterns are
+
+\[
+\int [g(x)]^n g'(x)\,dx=\frac{[g(x)]^{n+1}}{n+1}+C\quad(n\ne-1),
+\]
+
+\[
+\int\frac{g'(x)}{g(x)}\,dx=\ln\lvert g(x)\rvert+C\quad(g(x)\ne0),
+\]
+
+\[
+\int e^{g(x)}g'(x)\,dx=e^{g(x)}+C,\qquad
+\int\cos(g(x))g'(x)\,dx=\sin(g(x))+C.
+\]
+
+For a linear inside expression, its derivative is the constant \(a\), so for \(a\ne0\):
+
+\[
+\int f(ax+b)\,dx=\frac1aF(ax+b)+C,\qquad F'=f.
+\]
+
+Do not simply integrate the outside function and ignore the inside derivative. For example, \(\int\cos(3x)\,dx=\frac13\sin(3x)+C\), since \(d[\sin(3x)]/dx=3\cos(3x)\).
+
+#### Example: cotangent
+
+Use \(\cot x=\cos x/\sin x\), then set \(u=\sin x\). [Derivative rule: \(d(\sin x)/dx=\cos x\), so \(du=\cos x\,dx\); logarithm rule: \(\int du/u=\ln\lvert u\rvert+C\).]
+
+\[
+\begin{aligned}
+\int\cot x\,dx
+&=\int\frac{\cos x}{\sin x}\,dx\\
+&=\int\frac1u\,du\\
+&=\ln\lvert u\rvert+C\\
+&=\boxed{\ln\lvert\sin x\rvert+C}.
+\end{aligned}
+\]
+
+This holds on any interval where \(\sin x\ne0\); cotangent is undefined at integer multiples of \(\pi\). The absolute value allows intervals where sine is negative.
+
+#### Example: numerator is half the inside derivative
+
+For \(\int x/(x^2+1)\,dx\), let \(u=x^2+1\). [Power rule: \(d(x^2+1)/dx=2x\), so \(du=2x\,dx\) and \(x\,dx=\tfrac12du\); logarithm rule: \(\int du/u=\ln\lvert u\rvert+C\).]
+
+\[
+\begin{aligned}
+\int\frac{x}{x^2+1}\,dx
+&=\frac12\int\frac1u\,du\\
+&=\frac12\ln\lvert u\rvert+C\\
+&=\boxed{\frac12\ln(x^2+1)+C}.
+\end{aligned}
+\]
+
+Here \(x^2+1>0\) for every real \(x\), so the absolute-value signs are unnecessary. Notice that the different integrand \(1/(1+x^2)\) has the arctangent antiderivative listed above.
 
 ### Techniques
 
