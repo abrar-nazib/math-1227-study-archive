@@ -40,6 +40,8 @@ Use this as a glance sheet. Here \(C\) is an arbitrary constant, \(u=u(x)\), and
 | \(\cos^{-1}u\) | \(-u'/\sqrt{1-u^2}\) |
 | \(\tan^{-1}u\) | \(u'/(1+u^2)\) |
 
+In these formulas \(u=u(x)\), and the derivative applies where the displayed expression is defined. For real powers, use an interval where the function is differentiable. For \(a^x\), assume \(a>0\); when integrating it, also require \(a\ne1\).
+
 ### Partial derivatives and gradient
 
 For \(f(x,y,z)\), \(\partial f/\partial x\) means differentiate with respect to \(x\) while holding \(y,z\) fixed.
@@ -73,7 +75,10 @@ Example: \(\partial(x^2y+3z)/\partial x=2xy\), because \(y,z\) are constants wit
 | \(a^x\) | \(a^x/\ln a+C\) |
 | \(\sin x\) | \(-\cos x+C\) |
 | \(\cos x\) | \(\sin x+C\) |
+| \(\tan x\) | \(-\ln\lvert\cos x\rvert+C\) |
 | \(\cot x\) | \(\ln\lvert\sin x\rvert+C\) |
+| \(\sec x\) | \(\ln\lvert\sec x+\tan x\rvert+C\) |
+| \(\csc x\) | \(\ln\lvert\csc x-\cot x\rvert+C\) |
 | \(\sec^2x\) | \(\tan x+C\) |
 | \(\csc^2x\) | \(-\cot x+C\) |
 | \(\sec x\tan x\) | \(\sec x+C\) |
@@ -81,6 +86,28 @@ Example: \(\partial(x^2y+3z)/\partial x=2xy\), because \(y,z\) are constants wit
 | \(1/(1+x^2)\) | \(\tan^{-1}x+C\) |
 | \(x/(1+x^2)\) | \(\frac12\ln(1+x^2)+C\) |
 | \(1/\sqrt{1-x^2}\) | \(\sin^{-1}x+C\) |
+| \(\ln x\) | \(x\ln x-x+C\), for \(x>0\) |
+
+Each formula holds on an interval where its integrand is defined; the constant \(C\) may differ on disconnected intervals. In particular, \(\int e^{ax}dx=e^{ax}/a+C\) requires \(a\ne0\); for \(a=0\), the integral is \(x+C\).
+
+### Common scaled forms
+
+For \(a>0\), the following are useful when the denominator is not in the unit form shown in the table:
+
+> [!IMPORTANT]
+> **Exam formulas — inverse-trigonometric and logarithmic forms**
+>
+> \[
+> \int\frac{dx}{a^2+x^2}=\frac1a\tan^{-1}\!\left(\frac xa\right)+C,
+> \qquad
+> \int\frac{dx}{\sqrt{a^2-x^2}}=\sin^{-1}\!\left(\frac xa\right)+C.
+> \]
+>
+> \[
+> \int\frac{dx}{x^2-a^2}=\frac1{2a}\ln\left\lvert\frac{x-a}{x+a}\right\rvert+C.
+> \]
+
+The square-root formula applies on \(-a<x<a\); the last formula applies on intervals avoiding \(x=\pm a\). The last one has a **difference** of squares; do not confuse it with the arctangent formula's **sum** of squares.
 
 ### Reverse chain rule: integration by substitution
 
@@ -156,6 +183,43 @@ Here \(x^2+1>0\) for every real \(x\), so the absolute-value signs are unnecessa
 | Rational function \(P(x)/Q(x)\) | Partial fractions | Factor \(Q(x)\), then decompose into simpler fractions |
 | Powers of trig functions | Trig identities | Convert using identities before integrating |
 
+### Integration by parts: choosing the pieces
+
+This reverses the product rule. If \(u=u(x)\) and \(dv=v'(x)\,dx\), then \(du=u'(x)\,dx\) and \(v\) is an antiderivative of \(dv\):
+
+> [!IMPORTANT]
+> **Exam formula — integration by parts**
+>
+> \[
+> \int u\,dv=uv-\int v\,du.
+> \]
+
+For definite limits, keep the boundary term:
+
+\[
+\int_a^b u\,dv=\bigl[uv\bigr]_a^b-\int_a^b v\,du.
+\]
+
+For example, in \(\int xe^x\,dx\), choose \(u=x\), \(dv=e^x\,dx\), so \(du=dx\) and \(v=e^x\). [Rules: \(d(x)/dx=1\), \(\int e^x\,dx=e^x+C\).] Then
+
+\[
+\begin{aligned}
+\int xe^x\,dx&=xe^x-\int e^x\,dx\\
+&=xe^x-e^x+C\\
+&=e^x(x-1)+C.
+\end{aligned}
+\]
+
+### Integrating with respect to one variable
+
+When other variables are held fixed, the integration “constant” can depend on them. For example, [power rule: \(\int x\,dx=x^2/2+C\)]
+
+\[
+\int 2xy\,dx=x^2y+g(y),
+\]
+
+where \(y\) is held constant and \(g(y)\) is any function of \(y\). Its partial derivative with respect to \(x\) is zero. This matters when finding a potential function or solving exact differential equations; see [the potential-function example](scalar-fields-gradient-and-potential.md).
+
 ## Definite integrals
 
 > [!IMPORTANT]
@@ -164,6 +228,15 @@ Here \(x^2+1>0\) for every real \(x\), so the absolute-value signs are unnecessa
 \[
 \int_a^b f(x)\,dx=F(b)-F(a),\qquad F'(x)=f(x).
 \]
+
+If \(u=g(x)\) in a definite integral, change the limits as well as the integrand:
+
+\[
+\int_a^b f(g(x))g'(x)\,dx
+=\int_{g(a)}^{g(b)}f(u)\,du.
+\]
+
+Alternatively, convert the antiderivative back to \(x\) before applying the original limits. Do not apply \(x\)-limits directly to a function still written in \(u\).
 
 Useful properties:
 
