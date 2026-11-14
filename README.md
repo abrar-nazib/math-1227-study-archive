@@ -14,6 +14,8 @@ For trigonometric identities and their common integral forms, use the [trigonome
 
 For explanations of individual pages from class materials, see [class-note explanations](study/class-note-explanations/README.md).
 
+For focused paper practice, use the [first-order ODE questions](questions/first-order-ode-questions.md) or [matrix questions](questions/matrix-questions.md), grouped by year.
+
 | Paper | Questions |
 | --- | --- |
 | [2014](questions/2014.md) | Math-1203 |
