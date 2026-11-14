@@ -6,3 +6,5 @@ These notes explain individual pages from class materials. Reusable background c
 
 - [Page 6: linear dependence](mah/page-06-linear-dependence.md)
 - [Page 7: dependence and collinear endpoints](mah/page-07-dependence-and-collinearity.md)
+- [Page 10: triple products and volume](mah/page-10-triple-product-and-volume.md)
+- [Pages 11–12: coplanarity and a plane](mah/pages-11-12-coplanarity-and-plane.md)
