@@ -9,3 +9,7 @@ These notes explain individual pages from class materials. Reusable background c
 - [Page 10: triple products and volume](mah/page-10-triple-product-and-volume.md)
 - [Pages 11–12: coplanarity and a plane](mah/pages-11-12-coplanarity-and-plane.md)
 - [Page 16: constant-length vectors and the Frenet frame](mah/page-16-constant-vectors-and-frenet-frame.md)
+
+## KH first-order ODE notes
+
+- [Problem 1(ii): forming a differential equation](kh/first-order-problem-1-ii.md)
