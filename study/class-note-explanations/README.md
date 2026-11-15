@@ -17,3 +17,4 @@ These notes explain individual pages from class materials. Reusable background c
 - [Chapter 2, Problem 6: constructing the potential function](kh/chapter-2-problem-6-exact-equation.md)
 - [Chapter 2, Problem 8(a): exact equation by the potential method](kh/chapter-2-problem-8a-exact-equation.md)
 - [Chapter 2, Problem 10: homogeneous substitution](kh/chapter-2-problem-10-homogeneous-ode.md)
+- [Chapter 2, Problem 11: homogeneous initial-value problem](kh/chapter-2-problem-11-homogeneous-ivp.md)
