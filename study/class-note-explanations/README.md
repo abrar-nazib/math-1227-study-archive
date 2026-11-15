@@ -19,3 +19,4 @@ These notes explain individual pages from class materials. Reusable background c
 - [Chapter 2, Problem 10: homogeneous substitution](kh/chapter-2-problem-10-homogeneous-ode.md)
 - [Chapter 2, Problem 11: homogeneous initial-value problem](kh/chapter-2-problem-11-homogeneous-ivp.md)
 - [Chapter 2, Problem 12: two homogeneous equations](kh/chapter-2-problem-12-homogeneous-equations.md)
+- [Integrating-factor exercises 1–3](kh/integrating-factor-problems-1-2-3.md)
