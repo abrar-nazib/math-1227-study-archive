@@ -95,7 +95,9 @@ has highest derivative \(d^3y/dx^3\), so it is **third order**. That highest der
 
 ## 4. General and particular solutions
 
-A **general solution** contains arbitrary constants, such as \(C\). Those constants represent the many possible curves allowed by a rate rule. An **initial condition** selects one curve by giving a value at a particular input, for example \(i(0)=0\). Substituting that condition determines the constant and gives a **particular solution**.
+A **general solution** contains arbitrary constants, such as \(C\). Those constants represent the many possible curves allowed by a rate rule. An **initial condition** gives a value at a particular input, for example \(i(0)=0\). Substitute that point to find a candidate value for the constant and hence a candidate **particular solution**.
+
+Check that the candidate is actually differentiable and satisfies the original ODE at the initial point as well as nearby. A curve can pass through the required point yet have a vertical tangent there, so that no differentiable solution \(y(x)\) exists at that point. An initial condition does not automatically guarantee existence or uniqueness.
 
 For a first-order ODE, expect one arbitrary constant in its general solution. For a third-order ODE, expect three constants in its complementary solution.
 
