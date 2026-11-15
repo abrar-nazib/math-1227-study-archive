@@ -26,6 +26,8 @@ The partial derivative \(\partial M/\partial y\) differentiates with respect to 
 
 ### Solving an exact equation
 
+For a ground-up introduction to recognizing total differentials by grouping, see [the grouping-method tutorial](grouping-total-differentials-tutorial.md).
+
 1. Verify \(M_y=N_x\).
 2. Integrate \(M\) with respect to \(x\): \(\Phi=\int M\,dx+g(y)\). The extra \(g(y)\) is needed because differentiating it with respect to \(x\) gives zero.
 3. Differentiate \(\Phi\) with respect to \(y\), compare with \(N\), and find \(g'(y)\).
