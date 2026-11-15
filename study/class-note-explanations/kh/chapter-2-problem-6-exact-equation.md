@@ -139,3 +139,114 @@ F_y&=0+2x^2+2y=N.
 \]
 
 Both match the original coefficients. Therefore \(dF=M\,dx+N\,dy\), and setting \(F=C\) gives the required implicit solution.
+
+## 5. The grouping method on PDF page 6
+
+Page 6 first presents an “another method” using the \(x\)-free part of \(N\), and then a separate **method of grouping**. The grouping method is like putting puzzle pieces together: look for terms that together form the total differential of one familiar expression. Then combine those smaller differentials into one.
+
+### First, an easy example
+
+Suppose we see
+
+\[
+y\,dx+x\,dy=0.
+\]
+
+The two pieces may look unrelated until we recall the product rule. For functions \(u\) and \(v\),
+
+\[
+d(uv)=u\,dv+v\,du.
+\]
+
+Choose \(u=x\) and \(v=y\). Then \(du=dx\) and \(dv=dy\), so
+
+\[
+\begin{aligned}
+d(xy)&=x\,dy+y\,dx\\
+&=y\,dx+x\,dy.
+\end{aligned}
+\]
+
+Therefore the original two pieces are exactly one total differential:
+
+\[
+\begin{aligned}
+y\,dx+x\,dy&=0,\\
+d(xy)&=0,\\
+xy&=C.
+\end{aligned}
+\]
+
+The last step uses \(\int dG=G+C\): if the total change of \(G\) along a solution curve is zero, \(G\) remains constant there. It does **not** say that \(dx\) and \(dy\) must individually be zero; their contributions can cancel along the curve.
+
+### Now group the terms in Problem 6
+
+First expand the brackets in the given equation:
+
+\[
+\begin{aligned}
+(3x^2+4xy)\,dx+(2x^2+2y)\,dy&=0,\\
+3x^2\,dx+4xy\,dx+2x^2\,dy+2y\,dy&=0.
+\end{aligned}
+\]
+
+There are four terms. We will recognize the first and last separately and the two middle terms **as a pair**.
+
+**First term.** [Power rule for differentials: \(d(x^n)=nx^{n-1}dx\).] With \(n=3\),
+
+\[
+d(x^3)=3x^2\,dx.
+\]
+
+**Last term.** The same power rule, with \(y\) as the variable and \(n=2\), gives
+
+\[
+d(y^2)=2y\,dy.
+\]
+
+**The middle pair.** We want to recognize
+
+\[
+4xy\,dx+2x^2\,dy.
+\]
+
+The \(dy\) term suggests the product \(2x^2y\): differentiating that product with respect to \(y\), while holding \(x\) fixed, gives \(2x^2\). Let's check **both** pieces using \(d(uv)=u\,dv+v\,du\), and the power rule \(d(x^2)=2x\,dx\):
+
+\[
+\begin{aligned}
+d(2x^2y)
+&=2\,d(x^2y)\\
+&=2\left(x^2\,dy+y\,d(x^2)\right)\\
+&=2\left(x^2\,dy+y(2x\,dx)\right)\\
+&=2x^2\,dy+4xy\,dx\\
+&=4xy\,dx+2x^2\,dy.
+\end{aligned}
+\]
+
+Both required terms are present, with the correct coefficients. This check is important: recognizing only one half of a product differential is not enough.
+
+Now replace each group in the expanded original equation:
+
+\[
+\begin{aligned}
+3x^2\,dx+\bigl(4xy\,dx+2x^2\,dy\bigr)+2y\,dy&=0,\\
+d(x^3)+d(2x^2y)+d(y^2)&=0.
+\end{aligned}
+\]
+
+By linearity, \(d(A+B+C)=dA+dB+dC\). Apply it in reverse:
+
+\[
+\begin{aligned}
+d\left(x^3+2x^2y+y^2\right)&=0,\\
+\boxed{x^3+2x^2y+y^2&=C.}
+\end{aligned}
+\]
+
+Again, \(dG=0\) along a solution means \(G\) is constant along that curve. This is the same implicit solution obtained by constructing \(F\) above.
+
+### How does this relate to the other shortcut?
+
+The preceding “another method” integrates \(M\) with respect to \(x\), giving \(x^3+2x^2y\), then adds the missing \(y\)-only contribution \(y^2\). Here that shortcut works because the \(2x^2\) part of \(N\) is already accounted for when differentiating \(2x^2y\) with respect to \(y\). More generally, don't blindly add all of \(N\): compare it with the \(y\)-derivative of what you already found, or you can count a term twice. The main method in sections 2–3 performs that comparison explicitly.
+
+Grouping can be quick when the pieces are recognizable. If a match isn't obvious, the systematic \(F_x=M\), then \(F_y=N\), method is a reliable alternative.
