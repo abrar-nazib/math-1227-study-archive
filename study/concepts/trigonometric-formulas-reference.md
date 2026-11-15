@@ -31,6 +31,16 @@ The related quotient identities are
 1+\cot^2\theta=\cosec^2\theta.
 \]
 
+The other reciprocal and quotient relationships are
+
+\[
+\cot\theta=\frac{\cos\theta}{\sin\theta},\qquad
+\sec\theta=\frac1{\cos\theta},\qquad
+\csc\theta=\frac1{\sin\theta}.
+\]
+
+These formulas apply where the denominators are nonzero. \(\csc\) and \(\cosec\) are two names for the same function.
+
 ## 2. Double-angle formulas
 
 “Double angle” means the input is \(2\theta\), twice the original angle. Use these for expressions with \(\sin\theta\cos\theta\), \(\cos^2\theta-\sin^2\theta\), or squares.
@@ -53,6 +63,12 @@ The related quotient identities are
 \]
 
 The three forms of \(\cos2\theta\) are equal. Choose the one that matches the expression already present.
+
+For tangent, wherever the expressions are defined,
+
+\[
+\tan2\theta=\frac{2\tan\theta}{1-\tan^2\theta}.
+\]
 
 ### The two identities used in 2024 Q1(c)
 
@@ -134,6 +150,35 @@ Example:
 
 \[
 \cos(A-B)=\cos A\cos B+\sin A\sin B.
+\]
+
+For tangent, the corresponding sum and difference formulas are
+
+> [!IMPORTANT]
+> **Exam formulas — tangent of a sum or difference**
+>
+> \[
+> \tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B},
+> \qquad
+> \tan(A-B)=\frac{\tan A-\tan B}{1+\tan A\tan B}.
+> \]
+
+Use these forms where \(\tan A\), \(\tan B\), and the displayed fraction are defined. The denominator has the opposite sign to the numerator. Setting \(A=B=\theta\) in the sum formula gives the tangent double-angle formula above.
+
+### Negative angles and periodicity
+
+\[
+\sin(-\theta)=-\sin\theta,\qquad
+\cos(-\theta)=\cos\theta,\qquad
+\tan(-\theta)=-\tan\theta.
+\]
+
+Sine and tangent are **odd** (their sign changes); cosine is **even** (its value stays the same). Wherever defined,
+
+\[
+\sin(\theta+2\pi)=\sin\theta,\qquad
+\cos(\theta+2\pi)=\cos\theta,\qquad
+\tan(\theta+\pi)=\tan\theta.
 \]
 
 Putting \(A=B=\theta\) in the sine-sum formula gives

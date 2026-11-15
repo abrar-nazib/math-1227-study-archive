@@ -2,6 +2,8 @@
 
 Use this as a glance sheet. Here \(C\) is an arbitrary constant, \(u=u(x)\), and \(u'=du/dx\). For partial derivatives, treat all variables other than the differentiated one as constants.
 
+For common trigonometric identities—including angle sums and differences, double angles, and exact values—open the [trigonometric formulas quick reference](trigonometric-formulas-reference.md).
+
 > [!IMPORTANT]
 > **Revision formula sheet**
 >
