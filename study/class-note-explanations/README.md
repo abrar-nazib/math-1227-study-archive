@@ -14,3 +14,4 @@ These notes explain individual pages from class materials. Reusable background c
 
 - [Problem 1(ii): forming a differential equation](kh/first-order-problem-1-ii.md)
 - [Chapter 2, Problem 3: separable ODE and inverse tangents](kh/chapter-2-problem-3-separable-ode.md)
+- [Chapter 2, Problem 6: constructing the potential function](kh/chapter-2-problem-6-exact-equation.md)
